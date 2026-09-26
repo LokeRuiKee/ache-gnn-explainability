@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "alpha": 0.05,
+  "source": "results/model4/cross_validation/fold_metrics.csv",
+  "design": {
+    "pairing": "Both models were rerun in this study on identical folds, so fold-level scores are paired.",
+    "excluded": "Literature metrics (SVC, AttentiveFP, CNN taken from other publications) are excluded; they are not paired observations.",
+    "primary_test": "Paired t-test on fold-level differences.",
+    "sensitivity_test": "Wilcoxon signed-rank."
+  },
+  "power_caveat": {
+    "n_pairs": 5,
+    "minimum_achievable_two_sided_wilcoxon_p": 0.0625,
+    "statement": "With 5 paired folds the two-sided Wilcoxon signed-rank test cannot fall below 0.0625, so it cannot reach alpha=0.05 regardless of effect size. A non-significant Wilcoxon result here is therefore uninformative about the absence of an effect."
+  },
+  "multiple_comparisons": {
+    "n_tests": 6,
+    "bonferroni_alpha": 0.008333333333333333,
+    "statement": "Several metrics are tested on the same folds and are strongly correlated. Treat individual p-values as descriptive; prefer effect sizes and intervals."
+  },
+  "comparisons": {
+    "model4_pyg__vs__svc_ecfp4": {
+      "accuracy": {
+        "comparison": "model4_pyg minus svc_ecfp4",
+        "n_pairs": 5,
+        "mean_difference": -0.004367851128764255,
+        "sd_difference": 0.012878173074472737,
+        "effect_direction": "svc_ecfp4 higher",
+        "cohens_dz": -0.3391669845952187,
+        "normality_shapiro_p": 0.7040452809677483,
+        "paired_t_test": {
+          "statistic": -0.7584004332785331,
+          "p_value": 0.490440841516484,
+          "significant_at_alpha": false
+        },
+        "wilcoxon_signed_rank": {
+          "statistic": 5.0,
+          "p_value": 0.625,
+          "significant_at_alpha": false,
+          "note": null
+        },
+        "minimum_achievable_wilcoxon_p": 0.0625
+      },
+      "precision": {
+        "comparison": "model4_pyg minus svc_ecfp4",
+        "n_pairs": 5,
+        "mean_difference": -0.021069074128662345,
+        "sd_difference": 0.021919104111064847,
+        "effect_direction": "svc_ecfp4 higher",
+        "cohens_dz": -0.9612196749422162,
+        "normality_shapiro_p": 0.5013668191306148,
+        "paired_t_test": {
+          "statistic": -2.1493525344810465,
+          "p_value": 0.09805280981961494,
+          "significant_at_alpha": false
+        },
+        "wilcoxon_signed_rank": {
+          "statistic": 2.0,
+          "p_value": 0.1875,
+          "significant_at_alpha": false,
+          "note": null
+        },
+        "minimum_achievable_wilcoxon_p": 0.0625
+      },
+      "recall": {
+        "comparison": "model4_pyg minus svc_ecfp4",
+        "n_pairs": 5,
+        "mean_difference": 0.020221008986698187,
+        "sd_difference": 0.021317415328182023,
+        "effect_direction": "model4_pyg higher",
+        "cohens_dz": 0.9485675761059847,
+        "normality_shapiro_p": 0.7873833407718496,
+        "paired_t_test": {
+          "statistic": 2.121061581425187,
+          "p_value": 0.10122099450208841,
+          "significant_at_alpha": false
+        },
+        "wilcoxon_signed_rank": {
+          "statistic": 1.0,
+          "p_value": 0.125,
+          "significant_at_alpha": false,
+          "note": null
+        },
+        "minimum_achievable_wilcoxon_p": 0.0625
+      },
+      "f1": {
+        "comparison": "model4_pyg minus svc_ecfp4",
+        "n_pairs": 5,
+        "mean_difference": -0.0007285606854438465,
+        "sd_difference": 0.014079879549727012,
+        "effect_direction": "svc_ecfp4 higher",
+        "cohens_dz": -0.051744809525588034,
+        "normality_shapiro_p": 0.46932402236737725,
+        "paired_t_test": {
+          "statistic": -0.11570491158199349,
+          "p_value": 0.913462502246777,
+          "significant_at_alpha": false
+        },
+        "wilcoxon_signed_rank": {
+          "statistic": 7.0,
+          "p_value": 1.0,
+          "significant_at_alpha": false,
+          "note": null
+        },
+        "minimum_achievable_wilcoxon_p": 0.0625
+      },
+      "roc_auc": {
+        "comparison": "model4_pyg minus svc_ecfp4",
+        "n_pairs": 5,
+        "mean_difference": -0.0007108858926422101,
+        "sd_difference": 0.009072703667705377,
+        "effect_direction": "svc_ecfp4 higher",
+        "cohens_dz": -0.07835436036257137,
+        "normality_shapiro_p": 0.637237040944075,
+        "paired_t_test": {
+          "statistic": -0.17520567610422466,
+          "p_value": 0.8694293849566945,
+          "significant_at_alpha": false
+        },
+        "wilcoxon_signed_rank": {
+          "statistic": 7.0,
+          "p_value": 1.0,
+          "significant_at_alpha": false,
+          "note": null
+        },
+        "minimum_achievable_wilcoxon_p": 0.0625
+      },
+      "pr_auc": {
+        "comparison": "model4_pyg minus svc_ecfp4",
+        "n_pairs": 5,
+        "mean_difference": -0.008627821550477588,
+        "sd_difference": 0.02291975543476987,
+        "effect_direction": "svc_ecfp4 higher",
+        "cohens_dz": -0.37643602153751415,
+        "normality_shapiro_p": 0.48101006016479064,
+        "paired_t_test": {
+          "statistic": -0.8417365333374566,
+          "p_value": 0.44731683264581656,
+          "significant_at_alpha": false
+        },
+        "wilcoxon_signed_rank": {
+          "statistic": 4.0,
+          "p_value": 0.4375,
+          "significant_at_alpha": false,
+          "note": null
+        },
+        "minimum_achievable_wilcoxon_p": 0.0625
+      }
+    }
+  }
+}

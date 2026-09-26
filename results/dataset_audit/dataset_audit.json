@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "source_path": "cleanData.xlsx",
+  "source_sha256": "168ab208ca7625994e1f92ef793eb8fd78f8fdd1ee12947478b3c6bf9a97cf28",
+  "sheet": "Sheet1",
+  "columns": [
+    "SMILES",
+    "single-class-label"
+  ],
+  "raw_rows": 4075,
+  "missing_smiles": 0,
+  "missing_labels": 0,
+  "invalid_smiles": 0,
+  "valid_molecules": 4075,
+  "analysis_ready_rows": 4075,
+  "class_counts_raw": {
+    "0": 2262,
+    "1": 1813
+  },
+  "class_percentages_raw": {
+    "0": 55.509202,
+    "1": 44.490798
+  },
+  "duplicate_rows": 0,
+  "duplicate_excess_rows": 0,
+  "duplicate_groups": 0,
+  "conflicting_label_groups": 0,
+  "unique_valid_canonical_smiles": 4075,
+  "canonicalization": {
+    "tool": "RDKit",
+    "version": "2026.03.5",
+    "method": "MolFromSmiles followed by canonical isomeric MolToSmiles",
+    "salt_removal": "not performed",
+    "charge_standardization": "not performed"
+  },
+  "pic50_threshold_verifiable": false,
+  "pic50_threshold_reason": "No pIC50 column exists in cleanData.xlsx",
+  "original_curation_verifiable": false,
+  "original_curation_reason": "The workbook contains only SMILES and single-class-label columns"
+}

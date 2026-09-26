@@ -1,0 +1,747 @@
+{
+  "schema_version": 1,
+  "notebooks": [
+    {
+      "path": "FYP2 demo with best hyper & cross val.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": [
+        {
+          "cell_index": 18,
+          "n_splits": 5,
+          "shuffle": true,
+          "random_state": 42,
+          "split_inputs": [
+            "smiles_list",
+            "labels"
+          ],
+          "independent_metric_maxima": true
+        }
+      ]
+    },
+    {
+      "path": "FYP2/Copy of FYP2exp12_gridSearchGCN_wip.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2 demo epoch with best hyper & cross val.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": [
+        {
+          "cell_index": 18,
+          "n_splits": 5,
+          "shuffle": true,
+          "random_state": 42,
+          "split_inputs": [
+            "smiles_list",
+            "labels"
+          ],
+          "independent_metric_maxima": true
+        },
+        {
+          "cell_index": 19,
+          "n_splits": 5,
+          "shuffle": true,
+          "random_state": 42,
+          "split_inputs": [
+            "smiles_list",
+            "labels"
+          ],
+          "independent_metric_maxima": true
+        },
+        {
+          "cell_index": 20,
+          "n_splits": 5,
+          "shuffle": true,
+          "random_state": 42,
+          "split_inputs": [
+            "smiles_list",
+            "labels"
+          ],
+          "independent_metric_maxima": true
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2 Molecular Validation.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 4,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp10_1000epoch_wip.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp12_gridSearchGCN_wip.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.0 EDA.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 6,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp14_new hyperparameter.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": [
+        {
+          "cell_index": 18,
+          "n_splits": 5,
+          "shuffle": true,
+          "random_state": 42,
+          "split_inputs": [
+            "smiles_list",
+            "labels"
+          ],
+          "independent_metric_maxima": true
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp15_Sutthibutpong + explainable.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 2,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": [
+        {
+          "cell_index": 11,
+          "n_splits": 5,
+          "shuffle": true,
+          "random_state": 42,
+          "split_inputs": [
+            "smiles_list",
+            "labels"
+          ],
+          "independent_metric_maxima": true
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp1_GNNExplainer.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 17,
+          "stages": [
+            {
+              "train_size": null,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": false
+            },
+            {
+              "train_size": null,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": false
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.16,
+            "test": 0.04
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp2, 3_XGNN.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": null,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": false
+            },
+            {
+              "train_size": null,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": false
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.16,
+            "test": 0.04
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp4_GNNExplainer.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 6,
+          "stages": [
+            {
+              "train_size": null,
+              "test_size": 0.4,
+              "random_state": 42,
+              "stratified": false
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": false
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.6,
+            "validation": 0.2,
+            "test": 0.2
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp5_GNNExplainer.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 4,
+          "stages": [
+            {
+              "train_size": null,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.1,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.18,
+            "test": 0.02
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp6_GNNExplainer.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 4,
+          "stages": [
+            {
+              "train_size": null,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.1,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.18,
+            "test": 0.02
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp7_GNNExplainer.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp8_GNNExplainer_fixed explainer.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    },
+    {
+      "path": "FYP2/FYP2exp9_GNNExplainer_wip.ipynb",
+      "holdout_splits": [
+        {
+          "cell_index": 5,
+          "stages": [
+            {
+              "train_size": 0.8,
+              "test_size": 0.2,
+              "random_state": 42,
+              "stratified": true
+            },
+            {
+              "train_size": null,
+              "test_size": 0.5,
+              "random_state": 42,
+              "stratified": true
+            }
+          ],
+          "effective_partition_fractions": {
+            "train": 0.8,
+            "validation": 0.1,
+            "test": 0.1
+          }
+        }
+      ],
+      "cross_validation": []
+    }
+  ]
+}

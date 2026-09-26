@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "purpose": "External performance figures quoted from other publications, kept out of code so that they cannot be mistaken for values measured in this study.",
+  "status": "UNVERIFIED IN THIS REPOSITORY",
+  "provenance": "Transcribed from RESEARCH_CONTEXT.md section 6 ('Literature / Comparison Models Already Used'). The underlying publications are not in this repository and their citations have not been confirmed here.",
+  "author_action_required": [
+    "Attach the exact citation for each entry, or delete the entry.",
+    "Confirm each value against the cited paper's own reported figure.",
+    "Confirm whether the value is a held-out test score, a cross-validation mean, or a validation score; if the paper does not say, record 'unspecified'."
+  ],
+  "usage_rule": "These values may only be placed beside a bootstrap interval as a descriptive comparison. They must never be used as the population mean of a one-sample hypothesis test: a single published number carries its own unreported sampling uncertainty, and was produced under a different split, class balance, and preprocessing pipeline (Reviewer 5, essential revision 1).",
+  "baselines": [
+    {
+      "name": "SVC (literature)",
+      "reported_by": "[AUTHOR TO SUPPLY CITATION]",
+      "evaluation_protocol": "unspecified",
+      "metrics": {
+        "accuracy": 0.87,
+        "f1": 0.86,
+        "roc_auc": 0.94
+      },
+      "precision_of_reported_values": "approximate; recorded to two decimal places in RESEARCH_CONTEXT.md"
+    },
+    {
+      "name": "AttentiveFP (literature)",
+      "reported_by": "[AUTHOR TO SUPPLY CITATION]",
+      "evaluation_protocol": "unspecified",
+      "metrics": {
+        "accuracy": 0.72,
+        "f1": 0.76,
+        "roc_auc": 0.75
+      },
+      "precision_of_reported_values": "approximate; recorded to two decimal places in RESEARCH_CONTEXT.md"
+    },
+    {
+      "name": "CNN (literature)",
+      "reported_by": "[AUTHOR TO SUPPLY CITATION]",
+      "evaluation_protocol": "unspecified",
+      "metrics": {
+        "accuracy": 0.94
+      },
+      "precision_of_reported_values": "approximate; F1 and ROC-AUC were not consistently available in the prior comparison"
+    }
+  ]
+}

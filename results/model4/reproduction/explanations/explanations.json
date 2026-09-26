@@ -1,0 +1,5041 @@
+{
+  "schema_version": 1,
+  "protocol": "reproduction",
+  "partition": "test",
+  "checkpoint": {
+    "path": "results/model4/reproduction/checkpoint.pt",
+    "selected_epoch": 575,
+    "selection_rule": {
+      "metric": "f1",
+      "split": "validation",
+      "mode": "max",
+      "value": 0.8672086720867209
+    }
+  },
+  "explainer_settings": {
+    "algorithm": "GNNExplainer",
+    "algorithm_epochs": 200,
+    "explanation_type": "model",
+    "node_mask_type": "attributes",
+    "edge_mask_type": "object",
+    "mode": "multiclass_classification",
+    "task_level": "graph",
+    "return_type": "raw",
+    "lr": 0.01,
+    "seed": 42,
+    "node_aggregation": "sum_over_attribute_mask",
+    "edge_aggregation": "mean_over_both_directions"
+  },
+  "selection_rules": {
+    "confident_true_positive": "max positive-class probability among true_positive",
+    "confident_true_negative": "min positive-class probability among true_negative",
+    "false_positive": "max positive-class probability among false_positive",
+    "false_negative": "min positive-class probability among false_negative"
+  },
+  "explanations": [
+    {
+      "role": "confident_true_positive",
+      "selection_rule": "max y_prob_positive among true_positive",
+      "row_index": 1504,
+      "smiles": "COc1cc(N)c(Cl)cc1C(=O)CCC1CCN(CC2CCCCC2C)CC1",
+      "true_label": 1,
+      "predicted_label": 1,
+      "predicted_probability_positive": 0.99999404,
+      "checkpoint_prediction": {
+        "predicted_class": 1,
+        "probability_class_0": 5.986160886095604e-06,
+        "probability_class_1": 0.9999940395355225
+      },
+      "n_atoms": 28,
+      "n_bonds": 30,
+      "top_k": 5,
+      "top_atoms": [
+        2,
+        3,
+        5,
+        19,
+        24
+      ],
+      "top_atom_labels": [
+        "C2",
+        "C19",
+        "C3",
+        "N5",
+        "C24"
+      ],
+      "connected_motifs": [
+        {
+          "atom_indices": [
+            2,
+            3
+          ],
+          "atom_labels": [
+            "C2",
+            "C3"
+          ],
+          "size": 2,
+          "smarts": "cc",
+          "all_aromatic": true,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            19,
+            24
+          ],
+          "atom_labels": [
+            "C19",
+            "C24"
+          ],
+          "size": 2,
+          "smarts": "CC",
+          "all_aromatic": false,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            5
+          ],
+          "atom_labels": [
+            "N5"
+          ],
+          "size": 1,
+          "smarts": "N",
+          "all_aromatic": false,
+          "all_in_ring": false
+        }
+      ],
+      "atom_table": [
+        {
+          "node_index": 2,
+          "atom_symbol": "C",
+          "atom_label": "C2",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.4164934158325195,
+          "importance_normalized": 1.0
+        },
+        {
+          "node_index": 19,
+          "atom_symbol": "C",
+          "atom_label": "C19",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.3894150257110596,
+          "importance_normalized": 0.9811129169023222
+        },
+        {
+          "node_index": 3,
+          "atom_symbol": "C",
+          "atom_label": "C3",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.31583833694458,
+          "importance_normalized": 0.9297934319347441
+        },
+        {
+          "node_index": 5,
+          "atom_symbol": "N",
+          "atom_label": "N5",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.305813789367676,
+          "importance_normalized": 0.9228013448035536
+        },
+        {
+          "node_index": 24,
+          "atom_symbol": "C",
+          "atom_label": "C24",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.292487859725952,
+          "importance_normalized": 0.9135065551440466
+        },
+        {
+          "node_index": 9,
+          "atom_symbol": "C",
+          "atom_label": "C9",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.235574722290039,
+          "importance_normalized": 0.8738098393762299
+        },
+        {
+          "node_index": 13,
+          "atom_symbol": "C",
+          "atom_label": "C13",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.0424373149871826,
+          "importance_normalized": 0.7390971683261081
+        },
+        {
+          "node_index": 16,
+          "atom_symbol": "C",
+          "atom_label": "C16",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.9116268157958984,
+          "importance_normalized": 0.6478572992942891
+        },
+        {
+          "node_index": 8,
+          "atom_symbol": "C",
+          "atom_label": "C8",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 2.9013867378234863,
+          "importance_normalized": 0.6407148804605205
+        },
+        {
+          "node_index": 7,
+          "atom_symbol": "Cl",
+          "atom_label": "Cl7",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.8605544567108154,
+          "importance_normalized": 0.6122345061478848
+        },
+        {
+          "node_index": 6,
+          "atom_symbol": "C",
+          "atom_label": "C6",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.8212456703186035,
+          "importance_normalized": 0.584816764113428
+        },
+        {
+          "node_index": 26,
+          "atom_symbol": "C",
+          "atom_label": "C26",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.808102607727051,
+          "importance_normalized": 0.5756495235865287
+        },
+        {
+          "node_index": 25,
+          "atom_symbol": "C",
+          "atom_label": "C25",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 2.7526750564575195,
+          "importance_normalized": 0.5369889990120347
+        },
+        {
+          "node_index": 0,
+          "atom_symbol": "C",
+          "atom_label": "C0",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 2.732114791870117,
+          "importance_normalized": 0.5226482858444244
+        },
+        {
+          "node_index": 11,
+          "atom_symbol": "O",
+          "atom_label": "O11",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.7283804416656494,
+          "importance_normalized": 0.5200435895419023
+        },
+        {
+          "node_index": 15,
+          "atom_symbol": "C",
+          "atom_label": "C15",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.7103097438812256,
+          "importance_normalized": 0.5074393405759733
+        },
+        {
+          "node_index": 10,
+          "atom_symbol": "C",
+          "atom_label": "C10",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.701749086380005,
+          "importance_normalized": 0.501468311690169
+        },
+        {
+          "node_index": 4,
+          "atom_symbol": "C",
+          "atom_label": "C4",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.6873950958251953,
+          "importance_normalized": 0.49145645311305525
+        },
+        {
+          "node_index": 22,
+          "atom_symbol": "C",
+          "atom_label": "C22",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.6192286014556885,
+          "importance_normalized": 0.44391055995399586
+        },
+        {
+          "node_index": 20,
+          "atom_symbol": "C",
+          "atom_label": "C20",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.583226203918457,
+          "importance_normalized": 0.41879901266661
+        },
+        {
+          "node_index": 14,
+          "atom_symbol": "C",
+          "atom_label": "C14",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 2.5798912048339844,
+          "importance_normalized": 0.4164728623837985
+        },
+        {
+          "node_index": 21,
+          "atom_symbol": "C",
+          "atom_label": "C21",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.571136474609375,
+          "importance_normalized": 0.4103664684472215
+        },
+        {
+          "node_index": 18,
+          "atom_symbol": "C",
+          "atom_label": "C18",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.4773926734924316,
+          "importance_normalized": 0.34498049263233305
+        },
+        {
+          "node_index": 27,
+          "atom_symbol": "C",
+          "atom_label": "C27",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.475038766860962,
+          "importance_normalized": 0.3433386509292877
+        },
+        {
+          "node_index": 23,
+          "atom_symbol": "C",
+          "atom_label": "C23",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.4213955402374268,
+          "importance_normalized": 0.30592268660047306
+        },
+        {
+          "node_index": 12,
+          "atom_symbol": "C",
+          "atom_label": "C12",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.384694814682007,
+          "importance_normalized": 0.2803240579448891
+        },
+        {
+          "node_index": 17,
+          "atom_symbol": "N",
+          "atom_label": "N17",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.3728127479553223,
+          "importance_normalized": 0.27203635765575007
+        },
+        {
+          "node_index": 1,
+          "atom_symbol": "O",
+          "atom_label": "O1",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 1.9827945232391357,
+          "importance_normalized": 0.0
+        }
+      ],
+      "bond_importance": [
+        {
+          "bond_index": 0,
+          "begin_atom": 0,
+          "end_atom": 1,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.2062011957168579,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 1,
+          "begin_atom": 1,
+          "end_atom": 2,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.554270789027214,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 2,
+          "begin_atom": 2,
+          "end_atom": 3,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.520736038684845,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 3,
+          "begin_atom": 3,
+          "end_atom": 4,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.627878725528717,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 4,
+          "begin_atom": 4,
+          "end_atom": 5,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5260917544364929,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 5,
+          "begin_atom": 4,
+          "end_atom": 6,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.7410786747932434,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 6,
+          "begin_atom": 6,
+          "end_atom": 7,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.43304233998060226,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 7,
+          "begin_atom": 6,
+          "end_atom": 8,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.613625168800354,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 8,
+          "begin_atom": 8,
+          "end_atom": 9,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5806232988834381,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 9,
+          "begin_atom": 9,
+          "end_atom": 10,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6588767170906067,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 10,
+          "begin_atom": 10,
+          "end_atom": 11,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.4497239589691162,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 11,
+          "begin_atom": 10,
+          "end_atom": 12,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5047098249197006,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 12,
+          "begin_atom": 12,
+          "end_atom": 13,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7694767713546753,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 13,
+          "begin_atom": 13,
+          "end_atom": 14,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6804769933223724,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 14,
+          "begin_atom": 14,
+          "end_atom": 15,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7000649571418762,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 15,
+          "begin_atom": 15,
+          "end_atom": 16,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6960887908935547,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 16,
+          "begin_atom": 16,
+          "end_atom": 17,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7616631388664246,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 17,
+          "begin_atom": 17,
+          "end_atom": 18,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.679985374212265,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 18,
+          "begin_atom": 18,
+          "end_atom": 19,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.426600344479084,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 19,
+          "begin_atom": 19,
+          "end_atom": 20,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5307013392448425,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 20,
+          "begin_atom": 20,
+          "end_atom": 21,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.3709044009447098,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 21,
+          "begin_atom": 21,
+          "end_atom": 22,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7118273079395294,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 22,
+          "begin_atom": 22,
+          "end_atom": 23,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.4162692204117775,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 23,
+          "begin_atom": 23,
+          "end_atom": 24,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5613724738359451,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 24,
+          "begin_atom": 24,
+          "end_atom": 25,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.8018003106117249,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 25,
+          "begin_atom": 17,
+          "end_atom": 26,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7252590358257294,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 26,
+          "begin_atom": 26,
+          "end_atom": 27,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5808447599411011,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 27,
+          "begin_atom": 9,
+          "end_atom": 2,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5617179423570633,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 28,
+          "begin_atom": 27,
+          "end_atom": 14,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.761650025844574,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 29,
+          "begin_atom": 24,
+          "end_atom": 19,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.769559383392334,
+          "n_directed_edges": 2
+        }
+      ],
+      "fidelity": {
+        "target_class": 1,
+        "k": 5,
+        "baseline_probability": 0.9999940395355225,
+        "baseline_logit_margin": 12.026054382324219,
+        "prediction_is_saturated": true,
+        "probability_drop_top_k": 0.00011515617370605469,
+        "probability_drop_bottom_k": 0.05680185556411743,
+        "probability_drop_random_k_mean": 0.3971736443358531,
+        "probability_drop_random_k_sd": 0.42416512732797307,
+        "margin_drop_top_k": 3.006946563720703,
+        "margin_drop_bottom_k": 9.216457605361938,
+        "margin_drop_random_k_mean": 11.14619766175747,
+        "margin_drop_random_k_sd": 4.241857274374318,
+        "margin_drop_top_minus_random": -8.139251098036766,
+        "margin_drop_top_minus_random_sd_units": -1.9187941912159976,
+        "top_k_beats_random_on_margin": false,
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 2.86102294921875e-05,
+            "probability_drop_bottom_k": -2.9802322387695312e-06,
+            "probability_drop_random_k_mean": 0.0003826403617859242,
+            "probability_drop_random_k_sd": 0.00125583845997986,
+            "margin_drop_top_k": 1.7525930404663086,
+            "margin_drop_bottom_k": -0.7168550491333008,
+            "margin_drop_random_k_mean": 2.226048460006714,
+            "margin_drop_random_k_sd": 1.6149954185676103,
+            "margin_drop_top_minus_random": -0.4734554195404055,
+            "margin_drop_top_minus_random_sd_units": -0.2931620821316805,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.0001913905143737793,
+            "probability_drop_bottom_k": 0.004949092864990234,
+            "probability_drop_random_k_mean": 0.09137215149239641,
+            "probability_drop_random_k_sd": 0.23251083532576367,
+            "margin_drop_top_k": 3.4957923889160156,
+            "margin_drop_bottom_k": 6.723679065704346,
+            "margin_drop_random_k_mean": 6.806164569854737,
+            "margin_drop_random_k_sd": 3.4989427737165086,
+            "margin_drop_top_minus_random": -3.310372180938721,
+            "margin_drop_top_minus_random_sd_units": -0.946106408428769,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.00011515617370605469,
+            "probability_drop_bottom_k": 0.05680185556411743,
+            "probability_drop_random_k_mean": 0.39632229695824206,
+            "probability_drop_random_k_sd": 0.39272425604412564,
+            "margin_drop_top_k": 3.006946563720703,
+            "margin_drop_bottom_k": 9.216457605361938,
+            "margin_drop_random_k_mean": 11.02232786476612,
+            "margin_drop_random_k_sd": 4.223437683608992,
+            "margin_drop_top_minus_random": -8.015381301045418,
+            "margin_drop_top_minus_random_sd_units": -1.8978334478931276,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.9979279537219554,
+            "probability_drop_bottom_k": 0.021844446659088135,
+            "probability_drop_random_k_mean": 0.8968665458151712,
+            "probability_drop_random_k_sd": 0.21925659265503447,
+            "margin_drop_top_k": 18.206085681915283,
+            "margin_drop_bottom_k": 8.224609375,
+            "margin_drop_random_k_mean": 19.251831243038176,
+            "margin_drop_random_k_sd": 5.742885011011137,
+            "margin_drop_top_minus_random": -1.0457455611228923,
+            "margin_drop_top_minus_random_sd_units": -0.18209411456399163,
+            "top_k_beats_random_on_margin": false
+          }
+        ],
+        "n_random_draws": 50,
+        "removal_semantics": "node feature rows zeroed; bond topology unchanged",
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Probability drops are uninformative when prediction_is_saturated is true."
+      },
+      "edge_fidelity": {
+        "target_class": 1,
+        "n_bonds": 30,
+        "baseline_probability": 0.9999940395355225,
+        "baseline_logit_margin": 12.026054382324219,
+        "prediction_is_saturated": true,
+        "n_random_draws": 50,
+        "removal_semantics": "bonds deleted in both directions; node features unchanged",
+        "ranked_by": "GNNExplainer edge mask, averaged over both directions",
+        "applicable": true,
+        "k": 5,
+        "probability_drop_top_k": 0.03741598129272461,
+        "probability_drop_bottom_k": 0.0006036758422851562,
+        "probability_drop_random_k_mean": 0.03278559446334839,
+        "probability_drop_random_k_sd": 0.0634497543637508,
+        "margin_drop_top_k": 8.778695821762085,
+        "margin_drop_bottom_k": 4.624047756195068,
+        "margin_drop_random_k_mean": 6.521814088821412,
+        "margin_drop_random_k_sd": 2.4672960413990115,
+        "margin_drop_top_minus_random": 2.2568817329406734,
+        "margin_drop_top_minus_random_sd_units": 0.9147186616734373,
+        "top_k_beats_random_on_margin": true,
+        "fragmentation": {
+          "fragments_top_k": 4,
+          "fragments_bottom_k": 5,
+          "fragments_random_k_mean": 3.72,
+          "fragments_random_k_sd": 0.6712765785411846,
+          "note": "1 means the molecule stayed connected. If fragments_top_k exceeds fragments_random_k_mean, part of the top-k margin drop is explained by topology rather than by attribution quality."
+        },
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 1.4901161193847656e-05,
+            "probability_drop_bottom_k": -3.2186508178710938e-06,
+            "probability_drop_random_k_mean": 0.00030104875564573863,
+            "probability_drop_random_k_sd": 0.0009713531337903506,
+            "margin_drop_top_k": 1.2513046264648438,
+            "margin_drop_bottom_k": -0.7997217178344727,
+            "margin_drop_random_k_mean": 1.2999370193481443,
+            "margin_drop_random_k_sd": 1.8394944438582206,
+            "margin_drop_top_minus_random": -0.04863239288330057,
+            "margin_drop_top_minus_random_sd_units": -0.026437912354493047,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.0584561824798584,
+            "probability_drop_bottom_k": 4.172325134277344e-06,
+            "probability_drop_random_k_mean": 0.003764954805374199,
+            "probability_drop_random_k_sd": 0.014936720966683059,
+            "margin_drop_top_k": 9.246918439865112,
+            "margin_drop_bottom_k": 0.5219745635986328,
+            "margin_drop_random_k_mean": 3.3853019428253166,
+            "margin_drop_random_k_sd": 2.331601142553064,
+            "margin_drop_top_minus_random": 5.861616497039796,
+            "margin_drop_top_minus_random_sd_units": 2.5139876585501346,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.03741598129272461,
+            "probability_drop_bottom_k": 0.0006036758422851562,
+            "probability_drop_random_k_mean": 0.03415703713893892,
+            "probability_drop_random_k_sd": 0.11776615207194449,
+            "margin_drop_top_k": 8.778695821762085,
+            "margin_drop_bottom_k": 4.624047756195068,
+            "margin_drop_random_k_mean": 6.023963222503662,
+            "margin_drop_random_k_sd": 2.7327305963034596,
+            "margin_drop_top_minus_random": 2.754732599258423,
+            "margin_drop_top_minus_random_sd_units": 1.0080512886944382,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.20989811420440674,
+            "probability_drop_bottom_k": 0.10015273094177246,
+            "probability_drop_random_k_mean": 0.2971990928053856,
+            "probability_drop_random_k_sd": 0.29395510549618864,
+            "margin_drop_top_k": 10.700550556182861,
+            "margin_drop_bottom_k": 9.830591678619385,
+            "margin_drop_random_k_mean": 10.327307723760605,
+            "margin_drop_random_k_sd": 2.425765811042683,
+            "margin_drop_top_minus_random": 0.37324283242225675,
+            "margin_drop_top_minus_random_sd_units": 0.15386597944581604,
+            "top_k_beats_random_on_margin": true
+          }
+        ],
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Node features are untouched here, so this probe is not subject to the out-of-distribution objection that limits the node-masking result."
+      },
+      "sparsity": {
+        "threshold": 0.5,
+        "n_atoms": 28,
+        "n_selected": 17,
+        "proportion_selected": 0.6071428571428571,
+        "sparsity": 0.3928571428571429,
+        "definition": "fraction of atoms below the normalized-importance threshold"
+      },
+      "stability": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "k": 5,
+        "n_pairs": 10,
+        "jaccard_mean": 0.505952380952381,
+        "jaccard_sd": 0.1486109786593175,
+        "spearman_mean": 0.7769567597153804,
+        "spearman_sd": 0.08765058261122059,
+        "top_k_sets": [
+          [
+            2,
+            3,
+            5,
+            19,
+            24
+          ],
+          [
+            3,
+            5,
+            9,
+            19,
+            24
+          ],
+          [
+            3,
+            5,
+            9,
+            13,
+            19
+          ],
+          [
+            2,
+            3,
+            5,
+            9,
+            24
+          ],
+          [
+            5,
+            6,
+            9,
+            13,
+            24
+          ]
+        ]
+      },
+      "settings": {
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "multiclass_classification",
+        "task_level": "graph",
+        "return_type": "raw",
+        "lr": 0.01,
+        "seed": 42,
+        "node_aggregation": "sum_over_attribute_mask",
+        "edge_aggregation": "mean_over_both_directions"
+      }
+    },
+    {
+      "role": "confident_true_negative",
+      "selection_rule": "min y_prob_positive among true_negative",
+      "row_index": 4059,
+      "smiles": "CC(C)N(CP(=O)(O)O)CP(=O)(O)O",
+      "true_label": 0,
+      "predicted_label": 0,
+      "predicted_probability_positive": 1.5985619999999999e-38,
+      "checkpoint_prediction": {
+        "predicted_class": 0,
+        "probability_class_0": 1.0,
+        "probability_class_1": 1.5985620517447502e-38
+      },
+      "n_atoms": 14,
+      "n_bonds": 13,
+      "top_k": 5,
+      "top_atoms": [
+        0,
+        1,
+        9,
+        11,
+        12
+      ],
+      "top_atom_labels": [
+        "C0",
+        "O11",
+        "O12",
+        "C9",
+        "C1"
+      ],
+      "connected_motifs": [
+        {
+          "atom_indices": [
+            0,
+            1
+          ],
+          "atom_labels": [
+            "C0",
+            "C1"
+          ],
+          "size": 2,
+          "smarts": "CC",
+          "all_aromatic": false,
+          "all_in_ring": false
+        },
+        {
+          "atom_indices": [
+            9
+          ],
+          "atom_labels": [
+            "C9"
+          ],
+          "size": 1,
+          "smarts": "C",
+          "all_aromatic": false,
+          "all_in_ring": false
+        },
+        {
+          "atom_indices": [
+            11
+          ],
+          "atom_labels": [
+            "O11"
+          ],
+          "size": 1,
+          "smarts": "O",
+          "all_aromatic": false,
+          "all_in_ring": false
+        },
+        {
+          "atom_indices": [
+            12
+          ],
+          "atom_labels": [
+            "O12"
+          ],
+          "size": 1,
+          "smarts": "O",
+          "all_aromatic": false,
+          "all_in_ring": false
+        }
+      ],
+      "atom_table": [
+        {
+          "node_index": 0,
+          "atom_symbol": "C",
+          "atom_label": "C0",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 0.7760180830955505,
+          "importance_normalized": 1.0
+        },
+        {
+          "node_index": 11,
+          "atom_symbol": "O",
+          "atom_label": "O11",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 0.7414546012878418,
+          "importance_normalized": 0.6433065736937836
+        },
+        {
+          "node_index": 12,
+          "atom_symbol": "O",
+          "atom_label": "O12",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 0.7382148504257202,
+          "importance_normalized": 0.6098725047010316
+        },
+        {
+          "node_index": 9,
+          "atom_symbol": "C",
+          "atom_label": "C9",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 0.7325292229652405,
+          "importance_normalized": 0.5511971099343239
+        },
+        {
+          "node_index": 1,
+          "atom_symbol": "C",
+          "atom_label": "C1",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 0.7322816252708435,
+          "importance_normalized": 0.5486419139488234
+        },
+        {
+          "node_index": 10,
+          "atom_symbol": "P",
+          "atom_label": "P10",
+          "degree": 4,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 0.7186232209205627,
+          "importance_normalized": 0.40768785519161815
+        },
+        {
+          "node_index": 3,
+          "atom_symbol": "N",
+          "atom_label": "N3",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 0.7082698941230774,
+          "importance_normalized": 0.3008420336505902
+        },
+        {
+          "node_index": 2,
+          "atom_symbol": "C",
+          "atom_label": "C2",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 0.7077351808547974,
+          "importance_normalized": 0.29532381911377636
+        },
+        {
+          "node_index": 4,
+          "atom_symbol": "C",
+          "atom_label": "C4",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 0.7033877372741699,
+          "importance_normalized": 0.2504584159384194
+        },
+        {
+          "node_index": 5,
+          "atom_symbol": "P",
+          "atom_label": "P5",
+          "degree": 4,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 0.7005215883255005,
+          "importance_normalized": 0.22087990025262855
+        },
+        {
+          "node_index": 7,
+          "atom_symbol": "O",
+          "atom_label": "O7",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 0.6984224319458008,
+          "importance_normalized": 0.19921671002216265
+        },
+        {
+          "node_index": 6,
+          "atom_symbol": "O",
+          "atom_label": "O6",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 0.6921316385269165,
+          "importance_normalized": 0.13429603243388877
+        },
+        {
+          "node_index": 13,
+          "atom_symbol": "O",
+          "atom_label": "O13",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 0.6806725263595581,
+          "importance_normalized": 0.01603856045400555
+        },
+        {
+          "node_index": 8,
+          "atom_symbol": "O",
+          "atom_label": "O8",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 0.6791183948516846,
+          "importance_normalized": 0.0
+        }
+      ],
+      "bond_importance": [
+        {
+          "bond_index": 0,
+          "begin_atom": 0,
+          "end_atom": 1,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.07785626500844955,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 1,
+          "begin_atom": 1,
+          "end_atom": 2,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.06705767661333084,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 2,
+          "begin_atom": 1,
+          "end_atom": 3,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5057859197258949,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 3,
+          "begin_atom": 3,
+          "end_atom": 4,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.07697688415646553,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 4,
+          "begin_atom": 4,
+          "end_atom": 5,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.50000324472785,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 5,
+          "begin_atom": 5,
+          "end_atom": 6,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.5067399702966213,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 6,
+          "begin_atom": 5,
+          "end_atom": 7,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.9363784193992615,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 7,
+          "begin_atom": 5,
+          "end_atom": 8,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.506567943841219,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 8,
+          "begin_atom": 3,
+          "end_atom": 9,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.07075821608304977,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 9,
+          "begin_atom": 9,
+          "end_atom": 10,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.0739041268825531,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 10,
+          "begin_atom": 10,
+          "end_atom": 11,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.5099286213517189,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 11,
+          "begin_atom": 10,
+          "end_atom": 12,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.4979857262223959,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 12,
+          "begin_atom": 10,
+          "end_atom": 13,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.07174486666917801,
+          "n_directed_edges": 2
+        }
+      ],
+      "fidelity": {
+        "target_class": 0,
+        "k": 5,
+        "baseline_probability": 1.0,
+        "baseline_logit_margin": 87.02912902832031,
+        "prediction_is_saturated": true,
+        "probability_drop_top_k": 0.0,
+        "probability_drop_bottom_k": 0.0,
+        "probability_drop_random_k_mean": 0.0,
+        "probability_drop_random_k_sd": 0.0,
+        "margin_drop_top_k": 6.3748626708984375,
+        "margin_drop_bottom_k": 50.707862854003906,
+        "margin_drop_random_k_mean": 20.053744583129884,
+        "margin_drop_random_k_sd": 19.277640080095587,
+        "margin_drop_top_minus_random": -13.678881912231446,
+        "margin_drop_top_minus_random_sd_units": -0.7095724297890108,
+        "top_k_beats_random_on_margin": false,
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 0.0,
+            "probability_drop_random_k_sd": 0.0,
+            "margin_drop_top_k": 8.566558837890625,
+            "margin_drop_bottom_k": 11.02154541015625,
+            "margin_drop_random_k_mean": 7.268269500732416,
+            "margin_drop_random_k_sd": 10.922718870022603,
+            "margin_drop_top_minus_random": 1.2982893371582094,
+            "margin_drop_top_minus_random_sd_units": 0.11886137074546191,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 0.0,
+            "probability_drop_random_k_sd": 0.0,
+            "margin_drop_top_k": 18.748748779296875,
+            "margin_drop_bottom_k": 22.509132385253906,
+            "margin_drop_random_k_mean": 13.974808120727545,
+            "margin_drop_random_k_sd": 16.63104047734536,
+            "margin_drop_top_minus_random": 4.77394065856933,
+            "margin_drop_top_minus_random_sd_units": 0.28705002943576174,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 0.0,
+            "probability_drop_random_k_sd": 0.0,
+            "margin_drop_top_k": 6.3748626708984375,
+            "margin_drop_bottom_k": 50.707862854003906,
+            "margin_drop_random_k_mean": 24.578579559326172,
+            "margin_drop_random_k_sd": 20.5661724123255,
+            "margin_drop_top_minus_random": -18.203716888427735,
+            "margin_drop_top_minus_random_sd_units": -0.8851290616195592,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 4.768371586472142e-09,
+            "probability_drop_random_k_sd": 3.3717478808715225e-08,
+            "margin_drop_top_k": 38.25102233886719,
+            "margin_drop_bottom_k": 43.74008560180664,
+            "margin_drop_random_k_mean": 44.70992092132568,
+            "margin_drop_random_k_sd": 21.025750281324235,
+            "margin_drop_top_minus_random": -6.458898582458495,
+            "margin_drop_top_minus_random_sd_units": -0.30718992169309184,
+            "top_k_beats_random_on_margin": false
+          }
+        ],
+        "n_random_draws": 50,
+        "removal_semantics": "node feature rows zeroed; bond topology unchanged",
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Probability drops are uninformative when prediction_is_saturated is true."
+      },
+      "edge_fidelity": {
+        "target_class": 0,
+        "n_bonds": 13,
+        "baseline_probability": 1.0,
+        "baseline_logit_margin": 87.02912902832031,
+        "prediction_is_saturated": true,
+        "n_random_draws": 50,
+        "removal_semantics": "bonds deleted in both directions; node features unchanged",
+        "ranked_by": "GNNExplainer edge mask, averaged over both directions",
+        "applicable": true,
+        "k": 5,
+        "probability_drop_top_k": 0.0,
+        "probability_drop_bottom_k": 0.0,
+        "probability_drop_random_k_mean": 0.0,
+        "probability_drop_random_k_sd": 0.0,
+        "margin_drop_top_k": 46.9277458190918,
+        "margin_drop_bottom_k": -6.3638763427734375,
+        "margin_drop_random_k_mean": 21.58545845031739,
+        "margin_drop_random_k_sd": 13.107636089063902,
+        "margin_drop_top_minus_random": 25.342287368774407,
+        "margin_drop_top_minus_random_sd_units": 1.933398760583401,
+        "top_k_beats_random_on_margin": true,
+        "fragmentation": {
+          "fragments_top_k": 6,
+          "fragments_bottom_k": 6,
+          "fragments_random_k_mean": 6.0,
+          "fragments_random_k_sd": 0.0,
+          "note": "1 means the molecule stayed connected. If fragments_top_k exceeds fragments_random_k_mean, part of the top-k margin drop is explained by topology rather than by attribution quality."
+        },
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 0.0,
+            "probability_drop_random_k_sd": 0.0,
+            "margin_drop_top_k": 11.948516845703125,
+            "margin_drop_bottom_k": 5.6258087158203125,
+            "margin_drop_random_k_mean": 4.905470275878912,
+            "margin_drop_random_k_sd": 9.072268817037735,
+            "margin_drop_top_minus_random": 7.043046569824213,
+            "margin_drop_top_minus_random_sd_units": 0.7763269267988798,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 0.0,
+            "probability_drop_random_k_sd": 0.0,
+            "margin_drop_top_k": 28.667896270751953,
+            "margin_drop_bottom_k": 4.7266845703125,
+            "margin_drop_random_k_mean": 14.008451766967767,
+            "margin_drop_random_k_sd": 12.705558322881199,
+            "margin_drop_top_minus_random": 14.659444503784187,
+            "margin_drop_top_minus_random_sd_units": 1.153782000857394,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 0.0,
+            "probability_drop_random_k_sd": 0.0,
+            "margin_drop_top_k": 46.9277458190918,
+            "margin_drop_bottom_k": -6.3638763427734375,
+            "margin_drop_random_k_mean": 24.530131607055665,
+            "margin_drop_random_k_sd": 11.490363557130467,
+            "margin_drop_top_minus_random": 22.39761421203613,
+            "margin_drop_top_minus_random_sd_units": 1.9492520058807936,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 0.0,
+            "probability_drop_random_k_sd": 0.0,
+            "margin_drop_top_k": 51.306541442871094,
+            "margin_drop_bottom_k": 19.492599487304688,
+            "margin_drop_random_k_mean": 42.10587608337402,
+            "margin_drop_random_k_sd": 9.107064632243047,
+            "margin_drop_top_minus_random": 9.200665359497073,
+            "margin_drop_top_minus_random_sd_units": 1.0102778151944414,
+            "top_k_beats_random_on_margin": true
+          }
+        ],
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Node features are untouched here, so this probe is not subject to the out-of-distribution objection that limits the node-masking result."
+      },
+      "sparsity": {
+        "threshold": 0.5,
+        "n_atoms": 14,
+        "n_selected": 5,
+        "proportion_selected": 0.35714285714285715,
+        "sparsity": 0.6428571428571428,
+        "definition": "fraction of atoms below the normalized-importance threshold"
+      },
+      "stability": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "k": 5,
+        "n_pairs": 10,
+        "jaccard_mean": 0.23015873015873017,
+        "jaccard_sd": 0.1233780298027621,
+        "spearman_mean": -0.040439560439560464,
+        "spearman_sd": 0.22743259073839642,
+        "top_k_sets": [
+          [
+            0,
+            1,
+            9,
+            11,
+            12
+          ],
+          [
+            2,
+            3,
+            11,
+            12,
+            13
+          ],
+          [
+            1,
+            6,
+            7,
+            11,
+            13
+          ],
+          [
+            2,
+            8,
+            10,
+            12,
+            13
+          ],
+          [
+            2,
+            3,
+            5,
+            7,
+            12
+          ]
+        ]
+      },
+      "settings": {
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "multiclass_classification",
+        "task_level": "graph",
+        "return_type": "raw",
+        "lr": 0.01,
+        "seed": 42,
+        "node_aggregation": "sum_over_attribute_mask",
+        "edge_aggregation": "mean_over_both_directions"
+      }
+    },
+    {
+      "role": "false_positive",
+      "selection_rule": "max y_prob_positive among false_positive",
+      "row_index": 82,
+      "smiles": "CC[N+](CC)(CC)CCOc1cc(OCC[N+](CC)(CC)CC)c(C(=O)NCCCCCC(=O)NNc2c3c(nc4ccccc24)CCCC3)cc1OCC[N+](CC)(CC)CC",
+      "true_label": 0,
+      "predicted_label": 1,
+      "predicted_probability_positive": 0.999819,
+      "checkpoint_prediction": {
+        "predicted_class": 1,
+        "probability_class_0": 0.0001809980603866279,
+        "probability_class_1": 0.9998189806938171
+      },
+      "n_atoms": 62,
+      "n_bonds": 65,
+      "top_k": 5,
+      "top_atoms": [
+        7,
+        15,
+        37,
+        43,
+        54
+      ],
+      "top_atom_labels": [
+        "C15",
+        "C54",
+        "C37",
+        "C7",
+        "C43"
+      ],
+      "connected_motifs": [
+        {
+          "atom_indices": [
+            7
+          ],
+          "atom_labels": [
+            "C7"
+          ],
+          "size": 1,
+          "smarts": "C",
+          "all_aromatic": false,
+          "all_in_ring": false
+        },
+        {
+          "atom_indices": [
+            15
+          ],
+          "atom_labels": [
+            "C15"
+          ],
+          "size": 1,
+          "smarts": "C",
+          "all_aromatic": false,
+          "all_in_ring": false
+        },
+        {
+          "atom_indices": [
+            37
+          ],
+          "atom_labels": [
+            "C37"
+          ],
+          "size": 1,
+          "smarts": "c",
+          "all_aromatic": true,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            43
+          ],
+          "atom_labels": [
+            "C43"
+          ],
+          "size": 1,
+          "smarts": "c",
+          "all_aromatic": true,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            54
+          ],
+          "atom_labels": [
+            "C54"
+          ],
+          "size": 1,
+          "smarts": "C",
+          "all_aromatic": false,
+          "all_in_ring": false
+        }
+      ],
+      "atom_table": [
+        {
+          "node_index": 15,
+          "atom_symbol": "C",
+          "atom_label": "C15",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.7763686180114746,
+          "importance_normalized": 1.0
+        },
+        {
+          "node_index": 54,
+          "atom_symbol": "C",
+          "atom_label": "C54",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.7591774463653564,
+          "importance_normalized": 0.9927283006511098
+        },
+        {
+          "node_index": 37,
+          "atom_symbol": "C",
+          "atom_label": "C37",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.657963752746582,
+          "importance_normalized": 0.9499158870974004
+        },
+        {
+          "node_index": 7,
+          "atom_symbol": "C",
+          "atom_label": "C7",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.532998561859131,
+          "importance_normalized": 0.897056819901977
+        },
+        {
+          "node_index": 43,
+          "atom_symbol": "C",
+          "atom_label": "C43",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.4757189750671387,
+          "importance_normalized": 0.8728281086451686
+        },
+        {
+          "node_index": 58,
+          "atom_symbol": "C",
+          "atom_label": "C58",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.449150323867798,
+          "importance_normalized": 0.861589826135741
+        },
+        {
+          "node_index": 41,
+          "atom_symbol": "C",
+          "atom_label": "C41",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.43461275100708,
+          "importance_normalized": 0.8554405734098749
+        },
+        {
+          "node_index": 36,
+          "atom_symbol": "C",
+          "atom_label": "C36",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.3997631072998047,
+          "importance_normalized": 0.8406995111558386
+        },
+        {
+          "node_index": 10,
+          "atom_symbol": "C",
+          "atom_label": "C10",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.395864486694336,
+          "importance_normalized": 0.8390504323436474
+        },
+        {
+          "node_index": 0,
+          "atom_symbol": "C",
+          "atom_label": "C0",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.343637466430664,
+          "importance_normalized": 0.8169589078644782
+        },
+        {
+          "node_index": 1,
+          "atom_symbol": "C",
+          "atom_label": "C1",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.2760090827941895,
+          "importance_normalized": 0.7883527556266293
+        },
+        {
+          "node_index": 51,
+          "atom_symbol": "C",
+          "atom_label": "C51",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.270073175430298,
+          "importance_normalized": 0.7858419242184146
+        },
+        {
+          "node_index": 40,
+          "atom_symbol": "C",
+          "atom_label": "C40",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.2567920684814453,
+          "importance_normalized": 0.7802241444218689
+        },
+        {
+          "node_index": 60,
+          "atom_symbol": "C",
+          "atom_label": "C60",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.24273419380188,
+          "importance_normalized": 0.7742777993874245
+        },
+        {
+          "node_index": 56,
+          "atom_symbol": "C",
+          "atom_label": "C56",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.238826036453247,
+          "importance_normalized": 0.7726246866251055
+        },
+        {
+          "node_index": 23,
+          "atom_symbol": "C",
+          "atom_label": "C23",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.2198243141174316,
+          "importance_normalized": 0.7645871418444773
+        },
+        {
+          "node_index": 17,
+          "atom_symbol": "C",
+          "atom_label": "C17",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.214263916015625,
+          "importance_normalized": 0.7622351472225396
+        },
+        {
+          "node_index": 21,
+          "atom_symbol": "C",
+          "atom_label": "C21",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.201613187789917,
+          "importance_normalized": 0.7568840115294329
+        },
+        {
+          "node_index": 27,
+          "atom_symbol": "C",
+          "atom_label": "C27",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.1819558143615723,
+          "importance_normalized": 0.7485691326775273
+        },
+        {
+          "node_index": 57,
+          "atom_symbol": "C",
+          "atom_label": "C57",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.1775448322296143,
+          "importance_normalized": 0.746703329894727
+        },
+        {
+          "node_index": 12,
+          "atom_symbol": "C",
+          "atom_label": "C12",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.169950485229492,
+          "importance_normalized": 0.7434909945593107
+        },
+        {
+          "node_index": 4,
+          "atom_symbol": "C",
+          "atom_label": "C4",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.167250156402588,
+          "importance_normalized": 0.742348781580661
+        },
+        {
+          "node_index": 61,
+          "atom_symbol": "C",
+          "atom_label": "C61",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.15084171295166,
+          "importance_normalized": 0.7354081686884992
+        },
+        {
+          "node_index": 6,
+          "atom_symbol": "C",
+          "atom_label": "C6",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.1418755054473877,
+          "importance_normalized": 0.7316155496272176
+        },
+        {
+          "node_index": 18,
+          "atom_symbol": "C",
+          "atom_label": "C18",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.1360650062561035,
+          "importance_normalized": 0.7291577646631818
+        },
+        {
+          "node_index": 3,
+          "atom_symbol": "C",
+          "atom_label": "C3",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.1326372623443604,
+          "importance_normalized": 0.7277078621385442
+        },
+        {
+          "node_index": 19,
+          "atom_symbol": "C",
+          "atom_label": "C19",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.13128399848938,
+          "importance_normalized": 0.7271354446154279
+        },
+        {
+          "node_index": 22,
+          "atom_symbol": "C",
+          "atom_label": "C22",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.109086036682129,
+          "importance_normalized": 0.7177459214495112
+        },
+        {
+          "node_index": 5,
+          "atom_symbol": "C",
+          "atom_label": "C5",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.0951895713806152,
+          "importance_normalized": 0.7118678510209776
+        },
+        {
+          "node_index": 42,
+          "atom_symbol": "C",
+          "atom_label": "C42",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.0798256397247314,
+          "importance_normalized": 0.7053690565165489
+        },
+        {
+          "node_index": 29,
+          "atom_symbol": "C",
+          "atom_label": "C29",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.079282760620117,
+          "importance_normalized": 0.7051394239055313
+        },
+        {
+          "node_index": 28,
+          "atom_symbol": "C",
+          "atom_label": "C28",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 3.0790350437164307,
+          "importance_normalized": 0.7050346420509651
+        },
+        {
+          "node_index": 20,
+          "atom_symbol": "C",
+          "atom_label": "C20",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.07865571975708,
+          "importance_normalized": 0.704874191684637
+        },
+        {
+          "node_index": 38,
+          "atom_symbol": "C",
+          "atom_label": "C38",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.050727605819702,
+          "importance_normalized": 0.6930608695845102
+        },
+        {
+          "node_index": 45,
+          "atom_symbol": "C",
+          "atom_label": "C45",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.032472610473633,
+          "importance_normalized": 0.6853391830988784
+        },
+        {
+          "node_index": 59,
+          "atom_symbol": "C",
+          "atom_label": "C59",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 3.003009557723999,
+          "importance_normalized": 0.6728765967257032
+        },
+        {
+          "node_index": 31,
+          "atom_symbol": "C",
+          "atom_label": "C31",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.9774529933929443,
+          "importance_normalized": 0.6620664171735745
+        },
+        {
+          "node_index": 24,
+          "atom_symbol": "C",
+          "atom_label": "C24",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.9750516414642334,
+          "importance_normalized": 0.6610506685314274
+        },
+        {
+          "node_index": 2,
+          "atom_symbol": "N",
+          "atom_label": "N2",
+          "degree": 4,
+          "formal_charge": 1,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.9526000022888184,
+          "importance_normalized": 0.6515538422921147
+        },
+        {
+          "node_index": 44,
+          "atom_symbol": "C",
+          "atom_label": "C44",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 2.903273105621338,
+          "importance_normalized": 0.6306890420467698
+        },
+        {
+          "node_index": 47,
+          "atom_symbol": "C",
+          "atom_label": "C47",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.8351030349731445,
+          "importance_normalized": 0.6018537614416692
+        },
+        {
+          "node_index": 46,
+          "atom_symbol": "C",
+          "atom_label": "C46",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.8349826335906982,
+          "importance_normalized": 0.6018028328213074
+        },
+        {
+          "node_index": 30,
+          "atom_symbol": "C",
+          "atom_label": "C30",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.7908430099487305,
+          "importance_normalized": 0.5831321988991551
+        },
+        {
+          "node_index": 48,
+          "atom_symbol": "C",
+          "atom_label": "C48",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.7582101821899414,
+          "importance_normalized": 0.5693288283522957
+        },
+        {
+          "node_index": 50,
+          "atom_symbol": "C",
+          "atom_label": "C50",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 2.731661319732666,
+          "importance_normalized": 0.5580989162893831
+        },
+        {
+          "node_index": 11,
+          "atom_symbol": "C",
+          "atom_label": "C11",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 2.728616237640381,
+          "importance_normalized": 0.5568108760136182
+        },
+        {
+          "node_index": 16,
+          "atom_symbol": "N",
+          "atom_label": "N16",
+          "degree": 4,
+          "formal_charge": 1,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.6407294273376465,
+          "importance_normalized": 0.5196356052170673
+        },
+        {
+          "node_index": 55,
+          "atom_symbol": "N",
+          "atom_label": "N55",
+          "degree": 4,
+          "formal_charge": 1,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.633798122406006,
+          "importance_normalized": 0.5167037302642772
+        },
+        {
+          "node_index": 32,
+          "atom_symbol": "C",
+          "atom_label": "C32",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.6027398109436035,
+          "importance_normalized": 0.503566364883496
+        },
+        {
+          "node_index": 49,
+          "atom_symbol": "C",
+          "atom_label": "C49",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.5849127769470215,
+          "importance_normalized": 0.4960257019098434
+        },
+        {
+          "node_index": 25,
+          "atom_symbol": "O",
+          "atom_label": "O25",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.5831563472747803,
+          "importance_normalized": 0.4952827491450799
+        },
+        {
+          "node_index": 14,
+          "atom_symbol": "C",
+          "atom_label": "C14",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.5739407539367676,
+          "importance_normalized": 0.4913846422879597
+        },
+        {
+          "node_index": 8,
+          "atom_symbol": "C",
+          "atom_label": "C8",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.540435314178467,
+          "importance_normalized": 0.4772121653044185
+        },
+        {
+          "node_index": 33,
+          "atom_symbol": "O",
+          "atom_label": "O33",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.481931686401367,
+          "importance_normalized": 0.4524656965487237
+        },
+        {
+          "node_index": 53,
+          "atom_symbol": "C",
+          "atom_label": "C53",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.459176540374756,
+          "importance_normalized": 0.44284048984659796
+        },
+        {
+          "node_index": 39,
+          "atom_symbol": "N",
+          "atom_label": "N39",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.4361939430236816,
+          "importance_normalized": 0.43311907343392725
+        },
+        {
+          "node_index": 34,
+          "atom_symbol": "N",
+          "atom_label": "N34",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 2.1063613891601562,
+          "importance_normalized": 0.2936030929909209
+        },
+        {
+          "node_index": 26,
+          "atom_symbol": "N",
+          "atom_label": "N26",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 2.0586400032043457,
+          "importance_normalized": 0.2734174082495692
+        },
+        {
+          "node_index": 9,
+          "atom_symbol": "O",
+          "atom_label": "O9",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 1.8259704113006592,
+          "importance_normalized": 0.17500042104354457
+        },
+        {
+          "node_index": 52,
+          "atom_symbol": "O",
+          "atom_label": "O52",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 1.7980809211730957,
+          "importance_normalized": 0.16320343644143476
+        },
+        {
+          "node_index": 13,
+          "atom_symbol": "O",
+          "atom_label": "O13",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 1.699844479560852,
+          "importance_normalized": 0.12165037169320721
+        },
+        {
+          "node_index": 35,
+          "atom_symbol": "N",
+          "atom_label": "N35",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 1.4122483730316162,
+          "importance_normalized": 0.0
+        }
+      ],
+      "bond_importance": [
+        {
+          "bond_index": 0,
+          "begin_atom": 0,
+          "end_atom": 1,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.4847545400261879,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 1,
+          "begin_atom": 1,
+          "end_atom": 2,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7961353063583374,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 2,
+          "begin_atom": 2,
+          "end_atom": 3,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7856440842151642,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 3,
+          "begin_atom": 3,
+          "end_atom": 4,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.47475916892290115,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 4,
+          "begin_atom": 2,
+          "end_atom": 5,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7842117547988892,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 5,
+          "begin_atom": 5,
+          "end_atom": 6,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.4864606335759163,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 6,
+          "begin_atom": 2,
+          "end_atom": 7,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7696107625961304,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 7,
+          "begin_atom": 7,
+          "end_atom": 8,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5342950969934464,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 8,
+          "begin_atom": 8,
+          "end_atom": 9,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5812751203775406,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 9,
+          "begin_atom": 9,
+          "end_atom": 10,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5688068866729736,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 10,
+          "begin_atom": 10,
+          "end_atom": 11,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.4768666625022888,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 11,
+          "begin_atom": 11,
+          "end_atom": 12,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5307129770517349,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 12,
+          "begin_atom": 12,
+          "end_atom": 13,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5592775642871857,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 13,
+          "begin_atom": 13,
+          "end_atom": 14,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5986685007810593,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 14,
+          "begin_atom": 14,
+          "end_atom": 15,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5152951180934906,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 15,
+          "begin_atom": 15,
+          "end_atom": 16,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.8054931163787842,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 16,
+          "begin_atom": 16,
+          "end_atom": 17,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.8033462464809418,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 17,
+          "begin_atom": 17,
+          "end_atom": 18,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5237228870391846,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 18,
+          "begin_atom": 16,
+          "end_atom": 19,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7903313040733337,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 19,
+          "begin_atom": 19,
+          "end_atom": 20,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5306311771273613,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 20,
+          "begin_atom": 16,
+          "end_atom": 21,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7805036306381226,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 21,
+          "begin_atom": 21,
+          "end_atom": 22,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5506797432899475,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 22,
+          "begin_atom": 12,
+          "end_atom": 23,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.633763462305069,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 23,
+          "begin_atom": 23,
+          "end_atom": 24,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6686101853847504,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 24,
+          "begin_atom": 24,
+          "end_atom": 25,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.539670392870903,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 25,
+          "begin_atom": 24,
+          "end_atom": 26,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6375508010387421,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 26,
+          "begin_atom": 26,
+          "end_atom": 27,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7361683249473572,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 27,
+          "begin_atom": 27,
+          "end_atom": 28,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7549549341201782,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 28,
+          "begin_atom": 28,
+          "end_atom": 29,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7548406422138214,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 29,
+          "begin_atom": 29,
+          "end_atom": 30,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7247301042079926,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 30,
+          "begin_atom": 30,
+          "end_atom": 31,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7289167046546936,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 31,
+          "begin_atom": 31,
+          "end_atom": 32,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5615361034870148,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 32,
+          "begin_atom": 32,
+          "end_atom": 33,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.6973470449447632,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 33,
+          "begin_atom": 32,
+          "end_atom": 34,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5475145280361176,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 34,
+          "begin_atom": 34,
+          "end_atom": 35,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.40655532479286194,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 35,
+          "begin_atom": 35,
+          "end_atom": 36,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.4747160002589226,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 36,
+          "begin_atom": 36,
+          "end_atom": 37,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.6800972819328308,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 37,
+          "begin_atom": 37,
+          "end_atom": 38,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.6849321126937866,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 38,
+          "begin_atom": 38,
+          "end_atom": 39,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5001396089792252,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 39,
+          "begin_atom": 39,
+          "end_atom": 40,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5971679836511612,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 40,
+          "begin_atom": 40,
+          "end_atom": 41,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.6684559285640717,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 41,
+          "begin_atom": 41,
+          "end_atom": 42,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.8104011714458466,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 42,
+          "begin_atom": 42,
+          "end_atom": 43,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.3721005916595459,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 43,
+          "begin_atom": 43,
+          "end_atom": 44,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.3569507300853729,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 44,
+          "begin_atom": 44,
+          "end_atom": 45,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5287976711988449,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 45,
+          "begin_atom": 38,
+          "end_atom": 46,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7270594537258148,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 46,
+          "begin_atom": 46,
+          "end_atom": 47,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7620497345924377,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 47,
+          "begin_atom": 47,
+          "end_atom": 48,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7579084932804108,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 48,
+          "begin_atom": 48,
+          "end_atom": 49,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7414090633392334,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 49,
+          "begin_atom": 23,
+          "end_atom": 50,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5595417022705078,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 50,
+          "begin_atom": 50,
+          "end_atom": 51,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.6460970938205719,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 51,
+          "begin_atom": 51,
+          "end_atom": 52,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5114267319440842,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 52,
+          "begin_atom": 52,
+          "end_atom": 53,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6270152926445007,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 53,
+          "begin_atom": 53,
+          "end_atom": 54,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5029479563236237,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 54,
+          "begin_atom": 54,
+          "end_atom": 55,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.8007333874702454,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 55,
+          "begin_atom": 55,
+          "end_atom": 56,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7707207202911377,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 56,
+          "begin_atom": 56,
+          "end_atom": 57,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.48699503391981125,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 57,
+          "begin_atom": 55,
+          "end_atom": 58,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7640352249145508,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 58,
+          "begin_atom": 58,
+          "end_atom": 59,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.49948225915431976,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 59,
+          "begin_atom": 55,
+          "end_atom": 60,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7809012532234192,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 60,
+          "begin_atom": 60,
+          "end_atom": 61,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5137323439121246,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 61,
+          "begin_atom": 51,
+          "end_atom": 10,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.7725153267383575,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 62,
+          "begin_atom": 45,
+          "end_atom": 36,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.6610959470272064,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 63,
+          "begin_atom": 49,
+          "end_atom": 37,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6856485903263092,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 64,
+          "begin_atom": 45,
+          "end_atom": 40,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5600668489933014,
+          "n_directed_edges": 2
+        }
+      ],
+      "fidelity": {
+        "target_class": 1,
+        "k": 5,
+        "baseline_probability": 0.9998189806938171,
+        "baseline_logit_margin": 8.616843223571777,
+        "prediction_is_saturated": false,
+        "probability_drop_top_k": 0.0854942798614502,
+        "probability_drop_bottom_k": 0.0016335248947143555,
+        "probability_drop_random_k_mean": 0.010211224555969234,
+        "probability_drop_random_k_sd": 0.043667843778989864,
+        "margin_drop_top_k": 6.249222755432129,
+        "margin_drop_bottom_k": 2.3067569732666016,
+        "margin_drop_random_k_mean": 2.3603628301620487,
+        "margin_drop_random_k_sd": 1.4705795969645234,
+        "margin_drop_top_minus_random": 3.88885992527008,
+        "margin_drop_top_minus_random_sd_units": 2.644440282795448,
+        "top_k_beats_random_on_margin": true,
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 0.00021839141845703125,
+            "probability_drop_bottom_k": 0.005779564380645752,
+            "probability_drop_random_k_mean": 0.00014574527740474075,
+            "probability_drop_random_k_sd": 0.0002078220200730355,
+            "margin_drop_top_k": 0.791661262512207,
+            "margin_drop_bottom_k": 3.5002365112304688,
+            "margin_drop_random_k_mean": 0.4118687248229982,
+            "margin_drop_random_k_sd": 0.6035577449162169,
+            "margin_drop_top_minus_random": 0.37979253768920884,
+            "margin_drop_top_minus_random_sd_units": 0.6292563402395406,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.0024967193603515625,
+            "probability_drop_bottom_k": 0.0009558796882629395,
+            "probability_drop_random_k_mean": 0.0035502326488494607,
+            "probability_drop_random_k_sd": 0.009727053498103419,
+            "margin_drop_top_k": 2.6967592239379883,
+            "margin_drop_bottom_k": 1.8384947776794434,
+            "margin_drop_random_k_mean": 1.8837848567962645,
+            "margin_drop_random_k_sd": 1.4625440417610567,
+            "margin_drop_top_minus_random": 0.8129743671417238,
+            "margin_drop_top_minus_random_sd_units": 0.5558631698795321,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.0854942798614502,
+            "probability_drop_bottom_k": 0.0016335248947143555,
+            "probability_drop_random_k_mean": 0.006540353298187251,
+            "probability_drop_random_k_sd": 0.012027581002037253,
+            "margin_drop_top_k": 6.249222755432129,
+            "margin_drop_bottom_k": 2.3067569732666016,
+            "margin_drop_random_k_mean": 2.5043279886245724,
+            "margin_drop_random_k_sd": 1.5531500211455687,
+            "margin_drop_top_minus_random": 3.7448947668075565,
+            "margin_drop_top_minus_random_sd_units": 2.4111610055836112,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.32803183794021606,
+            "probability_drop_bottom_k": 0.0027937889099121094,
+            "probability_drop_random_k_mean": 0.06193939507007595,
+            "probability_drop_random_k_sd": 0.10922637400521876,
+            "margin_drop_top_k": 7.900564134120941,
+            "margin_drop_bottom_k": 2.802253246307373,
+            "margin_drop_random_k_mean": 4.612362077236176,
+            "margin_drop_random_k_sd": 1.944689006195805,
+            "margin_drop_top_minus_random": 3.2882020568847654,
+            "margin_drop_top_minus_random_sd_units": 1.690862675938677,
+            "top_k_beats_random_on_margin": true
+          }
+        ],
+        "n_random_draws": 50,
+        "removal_semantics": "node feature rows zeroed; bond topology unchanged",
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Probability drops are uninformative when prediction_is_saturated is true."
+      },
+      "edge_fidelity": {
+        "target_class": 1,
+        "n_bonds": 65,
+        "baseline_probability": 0.9998189806938171,
+        "baseline_logit_margin": 8.616843223571777,
+        "prediction_is_saturated": false,
+        "n_random_draws": 50,
+        "removal_semantics": "bonds deleted in both directions; node features unchanged",
+        "ranked_by": "GNNExplainer edge mask, averaged over both directions",
+        "applicable": true,
+        "k": 5,
+        "probability_drop_top_k": 0.000280916690826416,
+        "probability_drop_bottom_k": 0.055034518241882324,
+        "probability_drop_random_k_mean": 0.0011461782455444158,
+        "probability_drop_random_k_sd": 0.001816405880765024,
+        "margin_drop_top_k": 0.9372539520263672,
+        "margin_drop_bottom_k": 5.777130842208862,
+        "margin_drop_random_k_mean": 1.3611358356475831,
+        "margin_drop_random_k_sd": 1.0641062587755696,
+        "margin_drop_top_minus_random": -0.4238818836212159,
+        "margin_drop_top_minus_random_sd_units": -0.3983454472948615,
+        "top_k_beats_random_on_margin": false,
+        "fragmentation": {
+          "fragments_top_k": 5,
+          "fragments_bottom_k": 5,
+          "fragments_random_k_mean": 4.58,
+          "fragments_random_k_sd": 0.9495433918790782,
+          "note": "1 means the molecule stayed connected. If fragments_top_k exceeds fragments_random_k_mean, part of the top-k margin drop is explained by topology rather than by attribution quality."
+        },
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 4.76837158203125e-05,
+            "probability_drop_bottom_k": 0.001050710678100586,
+            "probability_drop_random_k_mean": 9.236812591550958e-05,
+            "probability_drop_random_k_sd": 0.00019094083149739932,
+            "margin_drop_top_k": 0.23407745361328125,
+            "margin_drop_bottom_k": 1.9187397956848145,
+            "margin_drop_random_k_mean": 0.2701221179962161,
+            "margin_drop_random_k_sd": 0.4880098915618968,
+            "margin_drop_top_minus_random": -0.036044664382934855,
+            "margin_drop_top_minus_random_sd_units": -0.07386052005538729,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.00013893842697143555,
+            "probability_drop_bottom_k": 0.017829477787017822,
+            "probability_drop_random_k_mean": 0.00037934184074406296,
+            "probability_drop_random_k_sd": 0.0005693214828223187,
+            "margin_drop_top_k": 0.5699462890625,
+            "margin_drop_bottom_k": 4.618218898773193,
+            "margin_drop_random_k_mean": 0.8147228908538819,
+            "margin_drop_random_k_sd": 0.7475447491148981,
+            "margin_drop_top_minus_random": -0.24477660179138194,
+            "margin_drop_top_minus_random_sd_units": -0.32744073459308004,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.000280916690826416,
+            "probability_drop_bottom_k": 0.055034518241882324,
+            "probability_drop_random_k_mean": 0.0012909245491027344,
+            "probability_drop_random_k_sd": 0.0032935409358340615,
+            "margin_drop_top_k": 0.9372539520263672,
+            "margin_drop_bottom_k": 5.777130842208862,
+            "margin_drop_random_k_mean": 1.1818227767944336,
+            "margin_drop_random_k_sd": 1.2088110259573268,
+            "margin_drop_top_minus_random": -0.2445688247680664,
+            "margin_drop_top_minus_random_sd_units": -0.20232180176746678,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.0010383129119873047,
+            "probability_drop_bottom_k": 0.06015688180923462,
+            "probability_drop_random_k_mean": 0.005684708356857304,
+            "probability_drop_random_k_sd": 0.009003356776214439,
+            "margin_drop_top_k": 1.9086408615112305,
+            "margin_drop_bottom_k": 5.87128210067749,
+            "margin_drop_random_k_mean": 2.5974549531936644,
+            "margin_drop_random_k_sd": 1.3743820107079985,
+            "margin_drop_top_minus_random": -0.6888140916824339,
+            "margin_drop_top_minus_random_sd_units": -0.5011809571980635,
+            "top_k_beats_random_on_margin": false
+          }
+        ],
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Node features are untouched here, so this probe is not subject to the out-of-distribution objection that limits the node-masking result."
+      },
+      "sparsity": {
+        "threshold": 0.5,
+        "n_atoms": 62,
+        "n_selected": 49,
+        "proportion_selected": 0.7903225806451613,
+        "sparsity": 0.20967741935483875,
+        "definition": "fraction of atoms below the normalized-importance threshold"
+      },
+      "stability": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "k": 5,
+        "n_pairs": 10,
+        "jaccard_mean": 0.42658730158730157,
+        "jaccard_sd": 0.16533068730154496,
+        "spearman_mean": 0.8199642416458917,
+        "spearman_sd": 0.04202466640629964,
+        "top_k_sets": [
+          [
+            7,
+            15,
+            37,
+            43,
+            54
+          ],
+          [
+            7,
+            10,
+            15,
+            37,
+            45
+          ],
+          [
+            37,
+            40,
+            42,
+            43,
+            54
+          ],
+          [
+            7,
+            15,
+            37,
+            40,
+            54
+          ],
+          [
+            15,
+            37,
+            40,
+            42,
+            43
+          ]
+        ]
+      },
+      "settings": {
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "multiclass_classification",
+        "task_level": "graph",
+        "return_type": "raw",
+        "lr": 0.01,
+        "seed": 42,
+        "node_aggregation": "sum_over_attribute_mask",
+        "edge_aggregation": "mean_over_both_directions"
+      }
+    },
+    {
+      "role": "false_negative",
+      "selection_rule": "min y_prob_positive among false_negative",
+      "row_index": 1869,
+      "smiles": "Cc1cc[n+](C/C=C/C[n+]2ccc(C)cc2)cc1",
+      "true_label": 1,
+      "predicted_label": 0,
+      "predicted_probability_positive": 5.598182e-09,
+      "checkpoint_prediction": {
+        "predicted_class": 0,
+        "probability_class_0": 1.0,
+        "probability_class_1": 5.598192576172778e-09
+      },
+      "n_atoms": 18,
+      "n_bonds": 19,
+      "top_k": 5,
+      "top_atoms": [
+        3,
+        4,
+        9,
+        10,
+        16
+      ],
+      "top_atom_labels": [
+        "N4",
+        "N9",
+        "C3",
+        "C10",
+        "C16"
+      ],
+      "connected_motifs": [
+        {
+          "atom_indices": [
+            3,
+            4,
+            16
+          ],
+          "atom_labels": [
+            "C3",
+            "N4",
+            "C16"
+          ],
+          "size": 3,
+          "smarts": "c[n+]c",
+          "all_aromatic": true,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            9,
+            10
+          ],
+          "atom_labels": [
+            "N9",
+            "C10"
+          ],
+          "size": 2,
+          "smarts": "c[n+]",
+          "all_aromatic": true,
+          "all_in_ring": true
+        }
+      ],
+      "atom_table": [
+        {
+          "node_index": 4,
+          "atom_symbol": "N",
+          "atom_label": "N4",
+          "degree": 3,
+          "formal_charge": 1,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 1.0131042003631592,
+          "importance_normalized": 1.0
+        },
+        {
+          "node_index": 9,
+          "atom_symbol": "N",
+          "atom_label": "N9",
+          "degree": 3,
+          "formal_charge": 1,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 1.000075340270996,
+          "importance_normalized": 0.95962668331434
+        },
+        {
+          "node_index": 3,
+          "atom_symbol": "C",
+          "atom_label": "C3",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.8968124985694885,
+          "importance_normalized": 0.6396398709312785
+        },
+        {
+          "node_index": 10,
+          "atom_symbol": "C",
+          "atom_label": "C10",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.8574035167694092,
+          "importance_normalized": 0.517520875775973
+        },
+        {
+          "node_index": 16,
+          "atom_symbol": "C",
+          "atom_label": "C16",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.8520127534866333,
+          "importance_normalized": 0.5008161915861526
+        },
+        {
+          "node_index": 15,
+          "atom_symbol": "C",
+          "atom_label": "C15",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.8517175912857056,
+          "importance_normalized": 0.4999015546242545
+        },
+        {
+          "node_index": 17,
+          "atom_symbol": "C",
+          "atom_label": "C17",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.8503320813179016,
+          "importance_normalized": 0.49560819109854326
+        },
+        {
+          "node_index": 1,
+          "atom_symbol": "C",
+          "atom_label": "C1",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 0.8440711498260498,
+          "importance_normalized": 0.4762070640559864
+        },
+        {
+          "node_index": 2,
+          "atom_symbol": "C",
+          "atom_label": "C2",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.8393912315368652,
+          "importance_normalized": 0.46170511823603616
+        },
+        {
+          "node_index": 14,
+          "atom_symbol": "C",
+          "atom_label": "C14",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.8377999067306519,
+          "importance_normalized": 0.4567739838239287
+        },
+        {
+          "node_index": 12,
+          "atom_symbol": "C",
+          "atom_label": "C12",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 0.8365632891654968,
+          "importance_normalized": 0.45294200219054814
+        },
+        {
+          "node_index": 11,
+          "atom_symbol": "C",
+          "atom_label": "C11",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 0.7997366189956665,
+          "importance_normalized": 0.33882497224874725
+        },
+        {
+          "node_index": 0,
+          "atom_symbol": "C",
+          "atom_label": "C0",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 0.7760196328163147,
+          "importance_normalized": 0.2653317128941278
+        },
+        {
+          "node_index": 6,
+          "atom_symbol": "C",
+          "atom_label": "C6",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 0.7183138132095337,
+          "importance_normalized": 0.086515199929075
+        },
+        {
+          "node_index": 13,
+          "atom_symbol": "C",
+          "atom_label": "C13",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 0.718055009841919,
+          "importance_normalized": 0.08571323028275803
+        },
+        {
+          "node_index": 8,
+          "atom_symbol": "C",
+          "atom_label": "C8",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 0.7112396955490112,
+          "importance_normalized": 0.06459420372836465
+        },
+        {
+          "node_index": 7,
+          "atom_symbol": "C",
+          "atom_label": "C7",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 0.6921542882919312,
+          "importance_normalized": 0.005453098074127706
+        },
+        {
+          "node_index": 5,
+          "atom_symbol": "C",
+          "atom_label": "C5",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 0.6903945207595825,
+          "importance_normalized": 0.0
+        }
+      ],
+      "bond_importance": [
+        {
+          "bond_index": 0,
+          "begin_atom": 0,
+          "end_atom": 1,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.08088981732726097,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 1,
+          "begin_atom": 1,
+          "end_atom": 2,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5031291767954826,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 2,
+          "begin_atom": 2,
+          "end_atom": 3,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.9375576078891754,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 3,
+          "begin_atom": 3,
+          "end_atom": 4,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5097355656325817,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 4,
+          "begin_atom": 4,
+          "end_atom": 5,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.07962829247117043,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 5,
+          "begin_atom": 5,
+          "end_atom": 6,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.0815357081592083,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 6,
+          "begin_atom": 6,
+          "end_atom": 7,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.06917305290699005,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 7,
+          "begin_atom": 7,
+          "end_atom": 8,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.08017171546816826,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 8,
+          "begin_atom": 8,
+          "end_atom": 9,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.07864811643958092,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 9,
+          "begin_atom": 9,
+          "end_atom": 10,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5097725316882133,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 10,
+          "begin_atom": 10,
+          "end_atom": 11,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.07766488194465637,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 11,
+          "begin_atom": 11,
+          "end_atom": 12,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.08042458817362785,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 12,
+          "begin_atom": 12,
+          "end_atom": 13,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.07770869880914688,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 13,
+          "begin_atom": 12,
+          "end_atom": 14,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.07841997966170311,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 14,
+          "begin_atom": 14,
+          "end_atom": 15,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.07787307724356651,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 15,
+          "begin_atom": 4,
+          "end_atom": 16,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5095084942877293,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 16,
+          "begin_atom": 16,
+          "end_atom": 17,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5096833668649197,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 17,
+          "begin_atom": 17,
+          "end_atom": 1,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5091109424829483,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 18,
+          "begin_atom": 15,
+          "end_atom": 9,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.07762287557125092,
+          "n_directed_edges": 2
+        }
+      ],
+      "fidelity": {
+        "target_class": 0,
+        "k": 5,
+        "baseline_probability": 1.0,
+        "baseline_logit_margin": 19.000822067260742,
+        "prediction_is_saturated": true,
+        "probability_drop_top_k": 0.0,
+        "probability_drop_bottom_k": 9.179115295410156e-06,
+        "probability_drop_random_k_mean": 0.0003796923160552801,
+        "probability_drop_random_k_sd": 0.0009177485964307161,
+        "margin_drop_top_k": -27.53416633605957,
+        "margin_drop_bottom_k": 7.404151916503906,
+        "margin_drop_random_k_mean": 6.404134349822998,
+        "margin_drop_random_k_sd": 7.0141325511413894,
+        "margin_drop_top_minus_random": -33.93830068588257,
+        "margin_drop_top_minus_random_sd_units": -4.838559927180145,
+        "top_k_beats_random_on_margin": false,
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 4.816055297895971e-07,
+            "probability_drop_random_k_sd": 4.5118626276522746e-07,
+            "margin_drop_top_k": 1.8733844757080078,
+            "margin_drop_bottom_k": 0.9113292694091797,
+            "margin_drop_random_k_mean": 3.093749160766601,
+            "margin_drop_random_k_sd": 2.2663392305943066,
+            "margin_drop_top_minus_random": -1.220364685058593,
+            "margin_drop_top_minus_random_sd_units": -0.5384739709679625,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 7.152557373046875e-07,
+            "probability_drop_random_k_mean": 6.1864852905269e-05,
+            "probability_drop_random_k_sd": 0.00015511590849427704,
+            "margin_drop_top_k": -15.97291374206543,
+            "margin_drop_bottom_k": 4.822610855102539,
+            "margin_drop_random_k_mean": 5.441644325256348,
+            "margin_drop_random_k_sd": 4.640060387955387,
+            "margin_drop_top_minus_random": -21.414558067321778,
+            "margin_drop_top_minus_random_sd_units": -4.615146415531451,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 9.179115295410156e-06,
+            "probability_drop_random_k_mean": 0.0011020016670226784,
+            "probability_drop_random_k_sd": 0.003907296401408347,
+            "margin_drop_top_k": -27.53416633605957,
+            "margin_drop_bottom_k": 7.404151916503906,
+            "margin_drop_random_k_mean": 7.260058040618896,
+            "margin_drop_random_k_sd": 5.937523524084501,
+            "margin_drop_top_minus_random": -34.794224376678464,
+            "margin_drop_top_minus_random_sd_units": -5.860056677761683,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.0,
+            "probability_drop_bottom_k": 5.0067901611328125e-06,
+            "probability_drop_random_k_mean": 3.389358520511365e-05,
+            "probability_drop_random_k_sd": 0.00017459865417310163,
+            "margin_drop_top_k": -33.23162651062012,
+            "margin_drop_bottom_k": 6.799417495727539,
+            "margin_drop_random_k_mean": -1.0139785957336436,
+            "margin_drop_random_k_sd": 9.807295878734356,
+            "margin_drop_top_minus_random": -32.21764791488647,
+            "margin_drop_top_minus_random_sd_units": -3.2850694333333603,
+            "top_k_beats_random_on_margin": false
+          }
+        ],
+        "n_random_draws": 50,
+        "removal_semantics": "node feature rows zeroed; bond topology unchanged",
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Probability drops are uninformative when prediction_is_saturated is true."
+      },
+      "edge_fidelity": {
+        "target_class": 0,
+        "n_bonds": 19,
+        "baseline_probability": 1.0,
+        "baseline_logit_margin": 19.000822067260742,
+        "prediction_is_saturated": true,
+        "n_random_draws": 50,
+        "removal_semantics": "bonds deleted in both directions; node features unchanged",
+        "ranked_by": "GNNExplainer edge mask, averaged over both directions",
+        "applicable": true,
+        "k": 5,
+        "probability_drop_top_k": 1.1920928955078125e-07,
+        "probability_drop_bottom_k": 9.107589721679688e-05,
+        "probability_drop_random_k_mean": 0.0015150105953216642,
+        "probability_drop_random_k_sd": 0.0049720932443740205,
+        "margin_drop_top_k": 2.603839874267578,
+        "margin_drop_bottom_k": 9.696582794189453,
+        "margin_drop_random_k_mean": 9.21957317829132,
+        "margin_drop_random_k_sd": 3.029574539390189,
+        "margin_drop_top_minus_random": -6.615733304023742,
+        "margin_drop_top_minus_random_sd_units": -2.1837169602552167,
+        "top_k_beats_random_on_margin": false,
+        "fragmentation": {
+          "fragments_top_k": 4,
+          "fragments_bottom_k": 5,
+          "fragments_random_k_mean": 4.24,
+          "fragments_random_k_sd": 0.4314191105869,
+          "note": "1 means the molecule stayed connected. If fragments_top_k exceeds fragments_random_k_mean, part of the top-k margin drop is explained by topology rather than by attribution quality."
+        },
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 1.1920928955078125e-07,
+            "probability_drop_bottom_k": 0.0,
+            "probability_drop_random_k_mean": 1.7404556273969973e-07,
+            "probability_drop_random_k_sd": 2.0606880896576495e-07,
+            "margin_drop_top_k": 3.1853151321411133,
+            "margin_drop_bottom_k": 0.20071983337402344,
+            "margin_drop_random_k_mean": 2.749400482177734,
+            "margin_drop_random_k_sd": 1.2705300410910152,
+            "margin_drop_top_minus_random": 0.4359146499633795,
+            "margin_drop_top_minus_random_sd_units": 0.34309668867731435,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 1.1920928955078125e-07,
+            "probability_drop_bottom_k": 9.5367431640625e-07,
+            "probability_drop_random_k_mean": 3.3372640609763415e-05,
+            "probability_drop_random_k_sd": 0.00010385788025173196,
+            "margin_drop_top_k": 3.0349302291870117,
+            "margin_drop_bottom_k": 5.131498336791992,
+            "margin_drop_random_k_mean": 6.319827222824097,
+            "margin_drop_random_k_sd": 2.282498761889864,
+            "margin_drop_top_minus_random": -3.2848969936370853,
+            "margin_drop_top_minus_random_sd_units": -1.4391670429285381,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 1.1920928955078125e-07,
+            "probability_drop_bottom_k": 9.107589721679688e-05,
+            "probability_drop_random_k_mean": 0.0010161209106445135,
+            "probability_drop_random_k_sd": 0.0036270140257660313,
+            "margin_drop_top_k": 2.603839874267578,
+            "margin_drop_bottom_k": 9.696582794189453,
+            "margin_drop_random_k_mean": 8.933554110527039,
+            "margin_drop_random_k_sd": 3.2825314809879504,
+            "margin_drop_top_minus_random": -6.329714236259461,
+            "margin_drop_top_minus_random_sd_units": -1.9283026752128494,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 1.1920928955078125e-06,
+            "probability_drop_bottom_k": 5.412101745605469e-05,
+            "probability_drop_random_k_mean": 0.0003449201583862749,
+            "probability_drop_random_k_sd": 0.0015460062641025657,
+            "margin_drop_top_k": 5.315816879272461,
+            "margin_drop_bottom_k": 9.177511215209961,
+            "margin_drop_random_k_mean": 5.767552747726441,
+            "margin_drop_random_k_sd": 4.432687468855435,
+            "margin_drop_top_minus_random": -0.45173586845398006,
+            "margin_drop_top_minus_random_sd_units": -0.10191015532403931,
+            "top_k_beats_random_on_margin": false
+          }
+        ],
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Node features are untouched here, so this probe is not subject to the out-of-distribution objection that limits the node-masking result."
+      },
+      "sparsity": {
+        "threshold": 0.5,
+        "n_atoms": 18,
+        "n_selected": 5,
+        "proportion_selected": 0.2777777777777778,
+        "sparsity": 0.7222222222222222,
+        "definition": "fraction of atoms below the normalized-importance threshold"
+      },
+      "stability": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "k": 5,
+        "n_pairs": 10,
+        "jaccard_mean": 0.3928571428571428,
+        "jaccard_sd": 0.07529232524210426,
+        "spearman_mean": 0.7787409700722394,
+        "spearman_sd": 0.05404852532977743,
+        "top_k_sets": [
+          [
+            3,
+            4,
+            9,
+            10,
+            16
+          ],
+          [
+            3,
+            4,
+            9,
+            11,
+            12
+          ],
+          [
+            4,
+            9,
+            12,
+            16,
+            17
+          ],
+          [
+            2,
+            4,
+            9,
+            10,
+            14
+          ],
+          [
+            4,
+            9,
+            10,
+            12,
+            15
+          ]
+        ]
+      },
+      "settings": {
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "multiclass_classification",
+        "task_level": "graph",
+        "return_type": "raw",
+        "lr": 0.01,
+        "seed": 42,
+        "node_aggregation": "sum_over_attribute_mask",
+        "edge_aggregation": "mean_over_both_directions"
+      }
+    },
+    {
+      "role": "historical_case_study",
+      "selection_rule": "molecule used in the historical XAI figure (outside this partition)",
+      "row_index": null,
+      "smiles": "COc1cccc(CN2CCC(/C=C3\\Cc4cccc(OC)c4C3=O)CC2)c1",
+      "true_label": null,
+      "predicted_label": null,
+      "predicted_probability_positive": null,
+      "checkpoint_prediction": {
+        "predicted_class": 1,
+        "probability_class_0": 0.17728397250175476,
+        "probability_class_1": 0.8227159976959229
+      },
+      "n_atoms": 28,
+      "n_bonds": 31,
+      "top_k": 5,
+      "top_atoms": [
+        4,
+        5,
+        17,
+        22,
+        27
+      ],
+      "top_atom_labels": [
+        "C4",
+        "C17",
+        "C5",
+        "C27",
+        "C22"
+      ],
+      "connected_motifs": [
+        {
+          "atom_indices": [
+            4,
+            5
+          ],
+          "atom_labels": [
+            "C4",
+            "C5"
+          ],
+          "size": 2,
+          "smarts": "cc",
+          "all_aromatic": true,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            17
+          ],
+          "atom_labels": [
+            "C17"
+          ],
+          "size": 1,
+          "smarts": "c",
+          "all_aromatic": true,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            22
+          ],
+          "atom_labels": [
+            "C22"
+          ],
+          "size": 1,
+          "smarts": "c",
+          "all_aromatic": true,
+          "all_in_ring": true
+        },
+        {
+          "atom_indices": [
+            27
+          ],
+          "atom_labels": [
+            "C27"
+          ],
+          "size": 1,
+          "smarts": "c",
+          "all_aromatic": true,
+          "all_in_ring": true
+        }
+      ],
+      "atom_table": [
+        {
+          "node_index": 4,
+          "atom_symbol": "C",
+          "atom_label": "C4",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.6770503520965576,
+          "importance_normalized": 1.0
+        },
+        {
+          "node_index": 17,
+          "atom_symbol": "C",
+          "atom_label": "C17",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.6728482246398926,
+          "importance_normalized": 0.9978568364303516
+        },
+        {
+          "node_index": 5,
+          "atom_symbol": "C",
+          "atom_label": "C5",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.607800245285034,
+          "importance_normalized": 0.9646811507639269
+        },
+        {
+          "node_index": 27,
+          "atom_symbol": "C",
+          "atom_label": "C27",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.4823219776153564,
+          "importance_normalized": 0.9006848881979964
+        },
+        {
+          "node_index": 22,
+          "atom_symbol": "C",
+          "atom_label": "C22",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.4485249519348145,
+          "importance_normalized": 0.883447773201372
+        },
+        {
+          "node_index": 3,
+          "atom_symbol": "C",
+          "atom_label": "C3",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.3717586994171143,
+          "importance_normalized": 0.8442955491265377
+        },
+        {
+          "node_index": 16,
+          "atom_symbol": "C",
+          "atom_label": "C16",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.3227999210357666,
+          "importance_normalized": 0.8193256567747559
+        },
+        {
+          "node_index": 18,
+          "atom_symbol": "C",
+          "atom_label": "C18",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 3.194066047668457,
+          "importance_normalized": 0.7536689744333049
+        },
+        {
+          "node_index": 2,
+          "atom_symbol": "C",
+          "atom_label": "C2",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.1133334636688232,
+          "importance_normalized": 0.7124938471445887
+        },
+        {
+          "node_index": 23,
+          "atom_symbol": "C",
+          "atom_label": "C23",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 3.0411386489868164,
+          "importance_normalized": 0.6756731418376658
+        },
+        {
+          "node_index": 26,
+          "atom_symbol": "C",
+          "atom_label": "C26",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.98712158203125,
+          "importance_normalized": 0.6481234277387259
+        },
+        {
+          "node_index": 9,
+          "atom_symbol": "C",
+          "atom_label": "C9",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.945770502090454,
+          "importance_normalized": 0.6270336038319886
+        },
+        {
+          "node_index": 19,
+          "atom_symbol": "C",
+          "atom_label": "C19",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.872204065322876,
+          "importance_normalized": 0.5895133456163458
+        },
+        {
+          "node_index": 0,
+          "atom_symbol": "C",
+          "atom_label": "C0",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 2.8199386596679688,
+          "importance_normalized": 0.5628570115313752
+        },
+        {
+          "node_index": 13,
+          "atom_symbol": "C",
+          "atom_label": "C13",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.7984137535095215,
+          "importance_normalized": 0.5518789069415883
+        },
+        {
+          "node_index": 15,
+          "atom_symbol": "C",
+          "atom_label": "C15",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.7658886909484863,
+          "importance_normalized": 0.5352905169176773
+        },
+        {
+          "node_index": 6,
+          "atom_symbol": "C",
+          "atom_label": "C6",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": true,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.738501787185669,
+          "importance_normalized": 0.5213226839484891
+        },
+        {
+          "node_index": 11,
+          "atom_symbol": "C",
+          "atom_label": "C11",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 1,
+          "in_ring": true,
+          "importance_raw": 2.7288818359375,
+          "importance_normalized": 0.516416328948674
+        },
+        {
+          "node_index": 21,
+          "atom_symbol": "C",
+          "atom_label": "C21",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 3,
+          "in_ring": false,
+          "importance_raw": 2.621105432510376,
+          "importance_normalized": 0.4614483481163994
+        },
+        {
+          "node_index": 25,
+          "atom_symbol": "C",
+          "atom_label": "C25",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.4693942070007324,
+          "importance_normalized": 0.38407278657714466
+        },
+        {
+          "node_index": 10,
+          "atom_symbol": "C",
+          "atom_label": "C10",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.459102153778076,
+          "importance_normalized": 0.37882364700411875
+        },
+        {
+          "node_index": 24,
+          "atom_symbol": "O",
+          "atom_label": "O24",
+          "degree": 1,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 2.403766632080078,
+          "importance_normalized": 0.3506014963355247
+        },
+        {
+          "node_index": 7,
+          "atom_symbol": "C",
+          "atom_label": "C7",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": false,
+          "importance_raw": 2.375311851501465,
+          "importance_normalized": 0.33608902622429665
+        },
+        {
+          "node_index": 8,
+          "atom_symbol": "N",
+          "atom_label": "N8",
+          "degree": 3,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 0,
+          "in_ring": true,
+          "importance_raw": 2.355952262878418,
+          "importance_normalized": 0.3262152740622854
+        },
+        {
+          "node_index": 14,
+          "atom_symbol": "C",
+          "atom_label": "C14",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP3",
+          "total_num_hs": 2,
+          "in_ring": true,
+          "importance_raw": 2.2294435501098633,
+          "importance_normalized": 0.26169346522980064
+        },
+        {
+          "node_index": 12,
+          "atom_symbol": "C",
+          "atom_label": "C12",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 1,
+          "in_ring": false,
+          "importance_raw": 1.8223886489868164,
+          "importance_normalized": 0.05408785499300569
+        },
+        {
+          "node_index": 1,
+          "atom_symbol": "O",
+          "atom_label": "O1",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 1.720462441444397,
+          "importance_normalized": 0.0021035834424472117
+        },
+        {
+          "node_index": 20,
+          "atom_symbol": "O",
+          "atom_label": "O20",
+          "degree": 2,
+          "formal_charge": 0,
+          "is_aromatic": false,
+          "hybridization": "SP2",
+          "total_num_hs": 0,
+          "in_ring": false,
+          "importance_raw": 1.7163379192352295,
+          "importance_normalized": 0.0
+        }
+      ],
+      "bond_importance": [
+        {
+          "bond_index": 0,
+          "begin_atom": 0,
+          "end_atom": 1,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.20798904448747635,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 1,
+          "begin_atom": 1,
+          "end_atom": 2,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.589786484837532,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 2,
+          "begin_atom": 2,
+          "end_atom": 3,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.6532352119684219,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 3,
+          "begin_atom": 3,
+          "end_atom": 4,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.7834807932376862,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 4,
+          "begin_atom": 4,
+          "end_atom": 5,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.6929944753646851,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 5,
+          "begin_atom": 5,
+          "end_atom": 6,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.7119111120700836,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 6,
+          "begin_atom": 6,
+          "end_atom": 7,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7157309651374817,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 7,
+          "begin_atom": 7,
+          "end_atom": 8,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7780070900917053,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 8,
+          "begin_atom": 8,
+          "end_atom": 9,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.75882887840271,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 9,
+          "begin_atom": 9,
+          "end_atom": 10,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7281578183174133,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 10,
+          "begin_atom": 10,
+          "end_atom": 11,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7848915755748749,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 11,
+          "begin_atom": 11,
+          "end_atom": 12,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6826662123203278,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 12,
+          "begin_atom": 12,
+          "end_atom": 13,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.5410730838775635,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 13,
+          "begin_atom": 13,
+          "end_atom": 14,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.4123884364962578,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 14,
+          "begin_atom": 14,
+          "end_atom": 15,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.48746177554130554,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 15,
+          "begin_atom": 15,
+          "end_atom": 16,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5264924913644791,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 16,
+          "begin_atom": 16,
+          "end_atom": 17,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.8581470847129822,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 17,
+          "begin_atom": 17,
+          "end_atom": 18,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.8274518251419067,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 18,
+          "begin_atom": 18,
+          "end_atom": 19,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5864763557910919,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 19,
+          "begin_atom": 19,
+          "end_atom": 20,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.5469293966889381,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 20,
+          "begin_atom": 20,
+          "end_atom": 21,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.22178912907838821,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 21,
+          "begin_atom": 19,
+          "end_atom": 22,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.5879313349723816,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 22,
+          "begin_atom": 22,
+          "end_atom": 23,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.7006874084472656,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 23,
+          "begin_atom": 23,
+          "end_atom": 24,
+          "bond_type": "DOUBLE",
+          "is_aromatic": false,
+          "importance": 0.4910999536514282,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 24,
+          "begin_atom": 11,
+          "end_atom": 25,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.812009871006012,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 25,
+          "begin_atom": 25,
+          "end_atom": 26,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6393161416053772,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 26,
+          "begin_atom": 6,
+          "end_atom": 27,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.552435576915741,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 27,
+          "begin_atom": 27,
+          "end_atom": 2,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.49871687591075897,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 28,
+          "begin_atom": 26,
+          "end_atom": 8,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.749864012002945,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 29,
+          "begin_atom": 23,
+          "end_atom": 13,
+          "bond_type": "SINGLE",
+          "is_aromatic": false,
+          "importance": 0.6974330544471741,
+          "n_directed_edges": 2
+        },
+        {
+          "bond_index": 30,
+          "begin_atom": 22,
+          "end_atom": 15,
+          "bond_type": "AROMATIC",
+          "is_aromatic": true,
+          "importance": 0.581692099571228,
+          "n_directed_edges": 2
+        }
+      ],
+      "fidelity": {
+        "target_class": 1,
+        "k": 5,
+        "baseline_probability": 0.8227159976959229,
+        "baseline_logit_margin": 1.534858226776123,
+        "prediction_is_saturated": false,
+        "probability_drop_top_k": 0.7424298077821732,
+        "probability_drop_bottom_k": 0.004674375057220459,
+        "probability_drop_random_k_mean": 0.5248986948770471,
+        "probability_drop_random_k_sd": 0.26991651036626735,
+        "margin_drop_top_k": 3.973323106765747,
+        "margin_drop_bottom_k": 0.0317227840423584,
+        "margin_drop_random_k_mean": 3.2808502012491223,
+        "margin_drop_random_k_sd": 2.4510064120072834,
+        "margin_drop_top_minus_random": 0.6924729055166248,
+        "margin_drop_top_minus_random_sd_units": 0.28252594612737675,
+        "top_k_beats_random_on_margin": true,
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 0.05576682090759277,
+            "probability_drop_bottom_k": 0.11986327171325684,
+            "probability_drop_random_k_mean": 0.1134551447629929,
+            "probability_drop_random_k_sd": 0.15512443326385097,
+            "margin_drop_top_k": 0.34369421005249023,
+            "margin_drop_bottom_k": 0.6739387512207031,
+            "margin_drop_random_k_mean": 0.5734231781959533,
+            "margin_drop_random_k_sd": 0.7598109674141099,
+            "margin_drop_top_minus_random": -0.2297289681434631,
+            "margin_drop_top_minus_random_sd_units": -0.30235016075815196,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.508458137512207,
+            "probability_drop_bottom_k": 0.20965009927749634,
+            "probability_drop_random_k_mean": 0.30090010344982143,
+            "probability_drop_random_k_sd": 0.23215000914426998,
+            "margin_drop_top_k": 2.315146028995514,
+            "margin_drop_bottom_k": 1.0746399760246277,
+            "margin_drop_random_k_mean": 1.4319490760564804,
+            "margin_drop_random_k_sd": 1.121633455740519,
+            "margin_drop_top_minus_random": 0.8831969529390336,
+            "margin_drop_top_minus_random_sd_units": 0.7874203006506558,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.7424298077821732,
+            "probability_drop_bottom_k": 0.004674375057220459,
+            "probability_drop_random_k_mean": 0.5896518500309003,
+            "probability_drop_random_k_sd": 0.23465160188512738,
+            "margin_drop_top_k": 3.973323106765747,
+            "margin_drop_bottom_k": 0.0317227840423584,
+            "margin_drop_random_k_mean": 4.007321930527687,
+            "margin_drop_random_k_sd": 2.9585688058478623,
+            "margin_drop_top_minus_random": -0.03399882376193997,
+            "margin_drop_top_minus_random_sd_units": -0.011491645451928786,
+            "top_k_beats_random_on_margin": false
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.8227159347247905,
+            "probability_drop_bottom_k": 0.8163531413301826,
+            "probability_drop_random_k_mean": 0.8011106985372749,
+            "probability_drop_random_k_sd": 0.06848136180029783,
+            "margin_drop_top_k": 18.115447521209717,
+            "margin_drop_bottom_k": 6.585752964019775,
+            "margin_drop_random_k_mean": 11.07140872478485,
+            "margin_drop_random_k_sd": 5.320869986307163,
+            "margin_drop_top_minus_random": 7.044038796424866,
+            "margin_drop_top_minus_random_sd_units": 1.3238509519217987,
+            "top_k_beats_random_on_margin": true
+          }
+        ],
+        "n_random_draws": 50,
+        "removal_semantics": "node feature rows zeroed; bond topology unchanged",
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Probability drops are uninformative when prediction_is_saturated is true."
+      },
+      "edge_fidelity": {
+        "target_class": 1,
+        "n_bonds": 31,
+        "baseline_probability": 0.8227159976959229,
+        "baseline_logit_margin": 1.534858226776123,
+        "prediction_is_saturated": false,
+        "n_random_draws": 50,
+        "removal_semantics": "bonds deleted in both directions; node features unchanged",
+        "ranked_by": "GNNExplainer edge mask, averaged over both directions",
+        "applicable": true,
+        "k": 5,
+        "probability_drop_top_k": 0.800287414342165,
+        "probability_drop_bottom_k": -0.04453861713409424,
+        "probability_drop_random_k_mean": 0.2494509530793585,
+        "probability_drop_random_k_sd": 0.26611596183521213,
+        "margin_drop_top_k": 5.309593439102173,
+        "margin_drop_bottom_k": -0.3420414924621582,
+        "margin_drop_random_k_mean": 1.3984561878442765,
+        "margin_drop_random_k_sd": 2.1194883004116694,
+        "margin_drop_top_minus_random": 3.9111372512578964,
+        "margin_drop_top_minus_random_sd_units": 1.8453214629673746,
+        "top_k_beats_random_on_margin": true,
+        "fragmentation": {
+          "fragments_top_k": 3,
+          "fragments_bottom_k": 5,
+          "fragments_random_k_mean": 3.34,
+          "fragments_random_k_sd": 0.6883876458946718,
+          "note": "1 means the molecule stayed connected. If fragments_top_k exceeds fragments_random_k_mean, part of the top-k margin drop is explained by topology rather than by attribution quality."
+        },
+        "k_curve": [
+          {
+            "k": 1,
+            "probability_drop_top_k": 0.035636961460113525,
+            "probability_drop_bottom_k": -0.004590332508087158,
+            "probability_drop_random_k_mean": 0.026093649864196822,
+            "probability_drop_random_k_sd": 0.08266010224342775,
+            "margin_drop_top_k": 0.22745037078857422,
+            "margin_drop_bottom_k": -0.031797170639038086,
+            "margin_drop_random_k_mean": 0.08315130412578586,
+            "margin_drop_random_k_sd": 0.5606128505898026,
+            "margin_drop_top_minus_random": 0.14429906666278836,
+            "margin_drop_top_minus_random_sd_units": 0.25739521759263273,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 3,
+            "probability_drop_top_k": 0.5310514867305756,
+            "probability_drop_bottom_k": -0.06634503602981567,
+            "probability_drop_random_k_mean": 0.14848205901682376,
+            "probability_drop_random_k_sd": 0.22703385871710755,
+            "margin_drop_top_k": 2.4221718311309814,
+            "margin_drop_bottom_k": -0.5463275909423828,
+            "margin_drop_random_k_mean": 0.6611118960380554,
+            "margin_drop_random_k_sd": 1.3768896445968275,
+            "margin_drop_top_minus_random": 1.7610599350929261,
+            "margin_drop_top_minus_random_sd_units": 1.2790131307934915,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 5,
+            "probability_drop_top_k": 0.800287414342165,
+            "probability_drop_bottom_k": -0.04453861713409424,
+            "probability_drop_random_k_mean": 0.2898369152471423,
+            "probability_drop_random_k_sd": 0.25187128621667476,
+            "margin_drop_top_k": 5.309593439102173,
+            "margin_drop_bottom_k": -0.3420414924621582,
+            "margin_drop_random_k_mean": 1.4905923181772232,
+            "margin_drop_random_k_sd": 1.5902928874182152,
+            "margin_drop_top_minus_random": 3.8190011209249497,
+            "margin_drop_top_minus_random_sd_units": 2.4014451370181025,
+            "top_k_beats_random_on_margin": true
+          },
+          {
+            "k": 10,
+            "probability_drop_top_k": 0.8103937162086368,
+            "probability_drop_bottom_k": 0.28435975313186646,
+            "probability_drop_random_k_mean": 0.6438703181772507,
+            "probability_drop_random_k_sd": 0.24059223813620648,
+            "margin_drop_top_k": 5.9188055992126465,
+            "margin_drop_bottom_k": 1.3811310827732086,
+            "margin_drop_random_k_mean": 4.640948643088341,
+            "margin_drop_random_k_sd": 2.944312171453163,
+            "margin_drop_top_minus_random": 1.2778569561243058,
+            "margin_drop_top_minus_random_sd_units": 0.43400865183857884,
+            "top_k_beats_random_on_margin": true
+          }
+        ],
+        "interpretation": "Faithfulness requires margin_drop_top_k to exceed margin_drop_random_k_mean by more than its spread. Node features are untouched here, so this probe is not subject to the out-of-distribution objection that limits the node-masking result."
+      },
+      "sparsity": {
+        "threshold": 0.5,
+        "n_atoms": 28,
+        "n_selected": 18,
+        "proportion_selected": 0.6428571428571429,
+        "sparsity": 0.3571428571428571,
+        "definition": "fraction of atoms below the normalized-importance threshold"
+      },
+      "stability": {
+        "seeds": [
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "k": 5,
+        "n_pairs": 10,
+        "jaccard_mean": 0.5,
+        "jaccard_sd": 0.11501092655705904,
+        "spearman_mean": 0.8945265462506841,
+        "spearman_sd": 0.024643445031231212,
+        "top_k_sets": [
+          [
+            4,
+            5,
+            17,
+            22,
+            27
+          ],
+          [
+            2,
+            3,
+            4,
+            5,
+            22
+          ],
+          [
+            4,
+            5,
+            19,
+            22,
+            27
+          ],
+          [
+            2,
+            5,
+            18,
+            22,
+            27
+          ],
+          [
+            2,
+            4,
+            5,
+            17,
+            22
+          ]
+        ]
+      },
+      "settings": {
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "multiclass_classification",
+        "task_level": "graph",
+        "return_type": "raw",
+        "lr": 0.01,
+        "seed": 42,
+        "node_aggregation": "sum_over_attribute_mask",
+        "edge_aggregation": "mean_over_both_directions"
+      }
+    }
+  ],
+  "interpretation_limits": [
+    "Attribution describes the model's decision surface, not biochemical causality.",
+    "Node indices are RDKit atom indices; historical indices were degree-sorted and are not comparable (D-011).",
+    "Fidelity uses soft removal by zeroing node features; the perturbed graph is not a valid molecule.",
+    "edge_fidelity is the independent topological probe: it deletes bonds, leaves node features intact, and scores the explainer's edge mask.",
+    "Explainer mode was corrected to multiclass_classification to match the two-logit head (D-012)."
+  ]
+}

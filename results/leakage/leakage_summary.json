@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "source_path": "cleanData.xlsx",
+  "source_sha256": "168ab208ca7625994e1f92ef793eb8fd78f8fdd1ee12947478b3c6bf9a97cf28",
+  "sheet": "Sheet1",
+  "seed": 42,
+  "software": {
+    "pandas": "2.3.3",
+    "rdkit": "2026.03.5",
+    "scikit_learn": "1.9.0"
+  },
+  "splits": {
+    "historical_random": {
+      "rows": 4075,
+      "partition_counts": {
+        "train": 3260,
+        "validation": 408,
+        "test": 407
+      }
+    },
+    "prospective_scaffold": {
+      "rows": 4075,
+      "partition_counts": {
+        "train": 3260,
+        "validation": 408,
+        "test": 407
+      }
+    }
+  },
+  "leakage": {
+    "historical_random": {
+      "canonical_isomeric": {
+        "empty_identity_rows": 0,
+        "unique_nonempty_identities": 4075,
+        "duplicate_groups": 0,
+        "within_partition_groups": 0,
+        "cross_partition_groups": 0,
+        "affected_rows": 0,
+        "conflicting_label_groups": 0
+      },
+      "stereo_insensitive": {
+        "empty_identity_rows": 0,
+        "unique_nonempty_identities": 3970,
+        "duplicate_groups": 93,
+        "within_partition_groups": 48,
+        "cross_partition_groups": 45,
+        "affected_rows": 198,
+        "conflicting_label_groups": 4
+      },
+      "largest_fragment": {
+        "empty_identity_rows": 0,
+        "unique_nonempty_identities": 4075,
+        "duplicate_groups": 0,
+        "within_partition_groups": 0,
+        "cross_partition_groups": 0,
+        "affected_rows": 0,
+        "conflicting_label_groups": 0
+      },
+      "murcko_scaffold": {
+        "empty_identity_rows": 20,
+        "unique_nonempty_identities": 1186,
+        "duplicate_groups": 532,
+        "within_partition_groups": 224,
+        "cross_partition_groups": 308,
+        "affected_rows": 3401,
+        "conflicting_label_groups": 179
+      }
+    },
+    "prospective_scaffold": {
+      "canonical_isomeric": {
+        "empty_identity_rows": 0,
+        "unique_nonempty_identities": 4075,
+        "duplicate_groups": 0,
+        "within_partition_groups": 0,
+        "cross_partition_groups": 0,
+        "affected_rows": 0,
+        "conflicting_label_groups": 0
+      },
+      "stereo_insensitive": {
+        "empty_identity_rows": 0,
+        "unique_nonempty_identities": 3970,
+        "duplicate_groups": 93,
+        "within_partition_groups": 93,
+        "cross_partition_groups": 0,
+        "affected_rows": 198,
+        "conflicting_label_groups": 4
+      },
+      "largest_fragment": {
+        "empty_identity_rows": 0,
+        "unique_nonempty_identities": 4075,
+        "duplicate_groups": 0,
+        "within_partition_groups": 0,
+        "cross_partition_groups": 0,
+        "affected_rows": 0,
+        "conflicting_label_groups": 0
+      },
+      "murcko_scaffold": {
+        "empty_identity_rows": 20,
+        "unique_nonempty_identities": 1186,
+        "duplicate_groups": 532,
+        "within_partition_groups": 532,
+        "cross_partition_groups": 0,
+        "affected_rows": 3401,
+        "conflicting_label_groups": 179
+      }
+    }
+  }
+}

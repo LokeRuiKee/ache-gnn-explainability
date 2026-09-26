@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "variability_source": "model initialisation and training order (seed)",
+  "held_constant": "the committed reproduction split manifest",
+  "distinct_from": "results/model4/cross_validation/cross_validation.json, which varies the data partition instead. Seed variability and fold variability must not be pooled or presented as one figure.",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "num_epochs": 700,
+  "evaluated_partition": "test",
+  "summary": {
+    "accuracy": {
+      "mean": 0.8730548730548731,
+      "sd": 0.00992985720964961,
+      "n_folds": 3,
+      "ci95_lower": 0.8618181818181818,
+      "ci95_upper": 0.8842915642915643,
+      "values": [
+        0.8820638820638821,
+        0.8746928746928747,
+        0.8624078624078624
+      ]
+    },
+    "precision": {
+      "mean": 0.8406470764483512,
+      "sd": 0.017621767787022256,
+      "n_folds": 3,
+      "ci95_lower": 0.8207061689924998,
+      "ci95_upper": 0.8605879839042027,
+      "values": [
+        0.8481675392670157,
+        0.8532608695652174,
+        0.8205128205128205
+      ]
+    },
+    "recall": {
+      "mean": 0.8821362799263351,
+      "sd": 0.013903930820019813,
+      "n_folds": 3,
+      "ci95_lower": 0.8664025010509397,
+      "ci95_upper": 0.8978700588017305,
+      "values": [
+        0.8950276243093923,
+        0.8674033149171271,
+        0.8839779005524862
+      ]
+    },
+    "f1": {
+      "mean": 0.8607685147751525,
+      "sd": 0.009961167535561925,
+      "n_folds": 3,
+      "ci95_lower": 0.8494963925692772,
+      "ci95_upper": 0.8720406369810277,
+      "values": [
+        0.8709677419354839,
+        0.8602739726027397,
+        0.851063829787234
+      ]
+    },
+    "roc_auc": {
+      "mean": 0.9421682230805587,
+      "sd": 0.002446380506637189,
+      "n_folds": 3,
+      "ci95_lower": 0.9393998829302261,
+      "ci95_upper": 0.9449365632308913,
+      "values": [
+        0.9447513812154696,
+        0.9398865692074512,
+        0.9418667188187552
+      ]
+    },
+    "pr_auc": {
+      "mean": 0.9223737886828802,
+      "sd": 0.003935967387732062,
+      "n_folds": 3,
+      "ci95_lower": 0.917919822294456,
+      "ci95_upper": 0.9268277550713044,
+      "values": [
+        0.9247716839466069,
+        0.9245184039718303,
+        0.9178312781302035
+      ]
+    }
+  },
+  "runtime_minutes": 40.76
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "dpi": 300,
+  "formats": [
+    "svg (vector)",
+    "png (300 dpi raster fallback)"
+  ],
+  "generated": {
+    "table_headline_metrics": [
+      "results/tables/table_headline_metrics.csv",
+      "results/tables/table_headline_metrics.md"
+    ],
+    "table_historical_comparison": [
+      "results/tables/table_historical_comparison.csv",
+      "results/tables/table_historical_comparison.md"
+    ],
+    "figure_training_curves": [
+      "results/figures/figure_training_curves.svg",
+      "results/figures/figure_training_curves.png"
+    ],
+    "figure_confusion_matrices": [
+      "results/figures/figure_confusion_matrices.svg",
+      "results/figures/figure_confusion_matrices.png"
+    ],
+    "figure_roc_pr": [
+      "results/figures/figure_roc_pr.svg",
+      "results/figures/figure_roc_pr.png"
+    ],
+    "table_cross_validation": [
+      "results/tables/table_cross_validation.csv",
+      "results/tables/table_cross_validation.md"
+    ],
+    "figure_fold_variability": [
+      "results/figures/figure_fold_variability.svg",
+      "results/figures/figure_fold_variability.png"
+    ],
+    "table_statistical_tests": [
+      "results/tables/table_statistical_tests.csv",
+      "results/tables/table_statistical_tests.md"
+    ],
+    "table_atom_attributions": [
+      "results/tables/table_atom_attributions.csv",
+      "results/tables/table_atom_attributions.md"
+    ],
+    "figure_explanations": [
+      "results/figures/explanation_confident_true_positive.svg",
+      "results/figures/explanation_confident_true_positive.png",
+      "results/figures/explanation_confident_true_negative.svg",
+      "results/figures/explanation_confident_true_negative.png",
+      "results/figures/explanation_false_positive.svg",
+      "results/figures/explanation_false_positive.png",
+      "results/figures/explanation_false_negative.svg",
+      "results/figures/explanation_false_negative.png",
+      "results/figures/explanation_historical_case_study.svg",
+      "results/figures/explanation_historical_case_study.png"
+    ]
+  },
+  "skipped": [],
+  "note": "Every value originates from a committed machine-readable result file."
+}

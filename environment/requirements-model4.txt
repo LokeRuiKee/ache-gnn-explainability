@@ -1,0 +1,18 @@
+# Environment for the Model 4 PyTorch Geometric reconstruction (P0.7 onward).
+# Supersedes requirements-audit.txt for model work; the audit requirements
+# remain valid on their own for the dataset/protocol scripts.
+#
+# Install torch from the CPU index first:
+#   pip install torch==2.1.2 --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r environment/requirements-model4.txt
+
+numpy>=1.26,<2
+openpyxl>=3.1,<4
+pandas>=2.2,<3
+pytest>=8
+pyyaml>=6
+rdkit>=2025.3,<2027
+scikit-learn>=1.5,<2
+scipy>=1.11
+matplotlib>=3.8
+torch_geometric>=2.5,<3

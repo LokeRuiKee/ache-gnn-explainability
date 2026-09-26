@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "protocol": "generalization",
+  "protocol_label": "Prospective scaffold split (generalization)",
+  "comparable_with_historical_value": false,
+  "config_id": "model4_pyg_v1",
+  "manifest": "results/protocol/scaffold_split_manifest.csv",
+  "source_sha256": "168ab208ca7625994e1f92ef793eb8fd78f8fdd1ee12947478b3c6bf9a97cf28",
+  "seed": 42,
+  "num_epochs": 700,
+  "selected_epoch": 549,
+  "selection_rule": {
+    "metric": "f1",
+    "split": "validation",
+    "mode": "max",
+    "value": 0.8716814159292036
+  },
+  "partition_sizes": {
+    "train": 3260,
+    "validation": 408,
+    "test": 407
+  },
+  "metrics": {
+    "validation": {
+      "n": 408,
+      "n_positive": 223,
+      "n_negative": 185,
+      "accuracy": 0.8578431372549019,
+      "precision": 0.8602620087336245,
+      "recall": 0.8834080717488789,
+      "f1": 0.8716814159292036,
+      "roc_auc": 0.9143012968125076,
+      "pr_auc": 0.9133459103638444,
+      "confusion_matrix": {
+        "true_negative": 153,
+        "false_positive": 32,
+        "false_negative": 26,
+        "true_positive": 197
+      },
+      "confidence_intervals": {
+        "accuracy": {
+          "lower": 0.8235294117647058,
+          "upper": 0.8897058823529411,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "precision": {
+          "lower": 0.8141592920353983,
+          "upper": 0.9032258064516129,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "recall": {
+          "lower": 0.839278147699758,
+          "upper": 0.9227360139860139,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "f1": {
+          "lower": 0.8370936965390183,
+          "upper": 0.9017923242759518,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "roc_auc": {
+          "lower": 0.8833011217317323,
+          "upper": 0.9406091629739607,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "pr_auc": {
+          "lower": 0.873540213069514,
+          "upper": 0.9468148164229964,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        }
+      }
+    },
+    "test": {
+      "n": 407,
+      "n_positive": 221,
+      "n_negative": 186,
+      "accuracy": 0.7936117936117936,
+      "precision": 0.7890295358649789,
+      "recall": 0.8461538461538461,
+      "f1": 0.8165938864628821,
+      "roc_auc": 0.8726706563518708,
+      "pr_auc": 0.8901681325967276,
+      "confusion_matrix": {
+        "true_negative": 136,
+        "false_positive": 50,
+        "false_negative": 34,
+        "true_positive": 187
+      },
+      "confidence_intervals": {
+        "accuracy": {
+          "lower": 0.7542997542997543,
+          "upper": 0.8329238329238329,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "precision": {
+          "lower": 0.7357723577235772,
+          "upper": 0.8412717490842491,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "recall": {
+          "lower": 0.7962062301569043,
+          "upper": 0.8899607332485413,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "f1": {
+          "lower": 0.7759766049772678,
+          "upper": 0.8528784648187633,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "roc_auc": {
+          "lower": 0.8376164918877016,
+          "upper": 0.9062448424833746,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        },
+        "pr_auc": {
+          "lower": 0.8467706911769354,
+          "upper": 0.927301800678719,
+          "n_resamples": 2000,
+          "confidence": 0.95
+        }
+      }
+    }
+  },
+  "environment": {
+    "python": "3.10.8",
+    "torch": "2.1.2+cpu",
+    "torch_geometric": "2.8.0.post1",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "rdkit": "2026.03.5"
+  },
+  "training_minutes": 15.33,
+  "notes": [
+    "All reported metrics come from the single checkpoint selected by the declared validation criterion.",
+    "Confidence intervals are percentile bootstrap over evaluated samples, not cross-validation variability."
+  ]
+}

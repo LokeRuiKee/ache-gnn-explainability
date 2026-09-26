@@ -1,0 +1,19 @@
+Role,SMILES,True label,P(active),Motif atoms,Motif fragment,Aromatic,In ring,Node mask: top-5,Node mask: random-5,Node beats random,Edge deletion: top-5,Edge deletion: random-5,Edge beats random,Top-k Jaccard across seeds,Atoms selected
+confident_true_positive,COc1cc(N)c(Cl)cc1C(=O)CCC1CCN(CC2CCCCC2C)CC1,1,1.0000,"C2, C3",cc,yes,yes,3.0069,11.1462,no,8.7787,6.5218,yes,0.506,17/28
+confident_true_positive,COc1cc(N)c(Cl)cc1C(=O)CCC1CCN(CC2CCCCC2C)CC1,1,1.0000,"C19, C24",CC,no,yes,3.0069,11.1462,no,8.7787,6.5218,yes,0.506,17/28
+confident_true_positive,COc1cc(N)c(Cl)cc1C(=O)CCC1CCN(CC2CCCCC2C)CC1,1,1.0000,N5,N,no,no,3.0069,11.1462,no,8.7787,6.5218,yes,0.506,17/28
+confident_true_negative,CC(C)N(CP(=O)(O)O)CP(=O)(O)O,0,0.0000,"C0, C1",CC,no,no,6.3749,20.0537,no,46.9277,21.5855,yes,0.230,5/14
+confident_true_negative,CC(C)N(CP(=O)(O)O)CP(=O)(O)O,0,0.0000,C9,C,no,no,6.3749,20.0537,no,46.9277,21.5855,yes,0.230,5/14
+confident_true_negative,CC(C)N(CP(=O)(O)O)CP(=O)(O)O,0,0.0000,O11,O,no,no,6.3749,20.0537,no,46.9277,21.5855,yes,0.230,5/14
+confident_true_negative,CC(C)N(CP(=O)(O)O)CP(=O)(O)O,0,0.0000,O12,O,no,no,6.3749,20.0537,no,46.9277,21.5855,yes,0.230,5/14
+false_positive,CC[N+](CC)(CC)CCOc1cc(OCC[N+](CC)(CC)CC)c(C(=O)NCCCCCC(=O)NNc2c3c(nc4ccccc24)CCCC3)cc1OCC[N+](CC)(CC)CC,0,0.9998,C7,C,no,no,6.2492,2.3604,yes,0.9373,1.3611,no,0.427,49/62
+false_positive,CC[N+](CC)(CC)CCOc1cc(OCC[N+](CC)(CC)CC)c(C(=O)NCCCCCC(=O)NNc2c3c(nc4ccccc24)CCCC3)cc1OCC[N+](CC)(CC)CC,0,0.9998,C15,C,no,no,6.2492,2.3604,yes,0.9373,1.3611,no,0.427,49/62
+false_positive,CC[N+](CC)(CC)CCOc1cc(OCC[N+](CC)(CC)CC)c(C(=O)NCCCCCC(=O)NNc2c3c(nc4ccccc24)CCCC3)cc1OCC[N+](CC)(CC)CC,0,0.9998,C37,c,yes,yes,6.2492,2.3604,yes,0.9373,1.3611,no,0.427,49/62
+false_positive,CC[N+](CC)(CC)CCOc1cc(OCC[N+](CC)(CC)CC)c(C(=O)NCCCCCC(=O)NNc2c3c(nc4ccccc24)CCCC3)cc1OCC[N+](CC)(CC)CC,0,0.9998,C43,c,yes,yes,6.2492,2.3604,yes,0.9373,1.3611,no,0.427,49/62
+false_positive,CC[N+](CC)(CC)CCOc1cc(OCC[N+](CC)(CC)CC)c(C(=O)NCCCCCC(=O)NNc2c3c(nc4ccccc24)CCCC3)cc1OCC[N+](CC)(CC)CC,0,0.9998,C54,C,no,no,6.2492,2.3604,yes,0.9373,1.3611,no,0.427,49/62
+false_negative,Cc1cc[n+](C/C=C/C[n+]2ccc(C)cc2)cc1,1,0.0000,"C3, N4, C16",c[n+]c,yes,yes,-27.5342,6.4041,no,2.6038,9.2196,no,0.393,5/18
+false_negative,Cc1cc[n+](C/C=C/C[n+]2ccc(C)cc2)cc1,1,0.0000,"N9, C10",c[n+],yes,yes,-27.5342,6.4041,no,2.6038,9.2196,no,0.393,5/18
+historical_case_study,COc1cccc(CN2CCC(/C=C3\Cc4cccc(OC)c4C3=O)CC2)c1,not in partition,0.8227,"C4, C5",cc,yes,yes,3.9733,3.2809,yes,5.3096,1.3985,yes,0.500,18/28
+historical_case_study,COc1cccc(CN2CCC(/C=C3\Cc4cccc(OC)c4C3=O)CC2)c1,not in partition,0.8227,C17,c,yes,yes,3.9733,3.2809,yes,5.3096,1.3985,yes,0.500,18/28
+historical_case_study,COc1cccc(CN2CCC(/C=C3\Cc4cccc(OC)c4C3=O)CC2)c1,not in partition,0.8227,C22,c,yes,yes,3.9733,3.2809,yes,5.3096,1.3985,yes,0.500,18/28
+historical_case_study,COc1cccc(CN2CCC(/C=C3\Cc4cccc(OC)c4C3=O)CC2)c1,not in partition,0.8227,C27,c,yes,yes,3.9733,3.2809,yes,5.3096,1.3985,yes,0.500,18/28

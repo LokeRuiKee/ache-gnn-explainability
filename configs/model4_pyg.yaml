@@ -1,0 +1,163 @@
+# Model 4 PyTorch Geometric reconstruction configuration
+#
+# Every value below is either (a) recovered verbatim from the historical
+# candidate notebooks and traceable to results/model4/model4_spec_evidence.json,
+# or (b) an explicitly flagged CORRECTION with a recorded reason.
+#
+# This configuration does not describe a recovered original checkpoint. No such
+# checkpoint exists (see docs/discrepancies.md D-001).
+
+schema_version: 1
+config_id: model4_pyg_v1
+
+provenance:
+  evidence_artifact: results/model4/model4_spec_evidence.json
+  candidate_notebooks: 7          # FYP2/FYP2exp13.*_best hyperparameter*.ipynb
+  agreement: >-
+    All 7 candidate notebooks agree on featurizer, architecture, instantiation,
+    optimizer, criterion, batch size, and explainer configuration. They differ
+    only in num_epochs, which is the variable of that epoch study.
+  primary_reference_notebook: FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb
+  primary_reference_reason: >-
+    Rank 1 in results/provenance/model_provenance.md against the reported
+    Model 4 signature. Selection is an evidence-discovery aid, not proof of
+    identity.
+
+# ---------------------------------------------------------------------------
+# Data
+# ---------------------------------------------------------------------------
+data:
+  workbook: cleanData.xlsx
+  sheet: Sheet1
+  expected_sha256: 168ab208ca7625994e1f92ef793eb8fd78f8fdd1ee12947478b3c6bf9a97cf28
+  smiles_column: SMILES
+  label_column: single-class-label
+  n_rows: 4075
+
+featurizer:
+  historical: deepchem.feat.ConvMolFeaturizer
+  node_feature_dim: 75
+  layout:                          # verified against saved notebook output
+    atom_type_one_hot: [0, 43]     # 44 symbols, last = Unknown
+    degree_one_hot: [44, 54]       # degrees 0..10
+    implicit_valence_one_hot: [55, 61]
+    formal_charge: 62
+    num_radical_electrons: 63
+    hybridization_one_hot: [64, 68]  # SP, SP2, SP3, SP3D, SP3D2
+    is_aromatic: 69
+    total_num_hs_one_hot: [70, 74]   # 0..4
+  parity_reference:
+    smiles: CN(C)C(=O)Oc1cccc([N+](C)(C)C)c1
+    n_atoms: 16
+    atom_row_0_active_indices: [0, 45, 58, 66, 73]
+    source: FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb cell 10 output
+
+  atom_order:
+    historical: degree_sorted
+    reconstruction: rdkit_canonical_atom_order
+    status: CORRECTION
+    reason: >-
+      ConvMolFeaturizer emits atom rows sorted by degree, not in RDKit atom
+      order. The first three feature rows of the reference molecule are three
+      identical degree-1 methyl carbons, whereas RDKit atom order is C, N, C.
+      Explanation node indices produced by the historical pipeline therefore did
+      not correspond to RDKit atom indices, making atom labels such as "C33"
+      unverifiable. The reconstruction builds graphs in RDKit atom order so that
+      every explanation index maps to a named atom. Because GraphConv with
+      global_mean_pool is permutation-invariant at the graph level, this changes
+      atom-index interpretation only and does not change graph-level predictions.
+      See docs/discrepancies.md D-011.
+
+graph:
+  edges: undirected               # both (i,j) and (j,i) present
+  edge_features: none             # historical pipeline used no bond features
+  isolated_molecules_allowed: true  # empty edge_index permitted
+
+# ---------------------------------------------------------------------------
+# Architecture — recovered verbatim
+# ---------------------------------------------------------------------------
+model:
+  class_name: DeepChemStyleGraphConv
+  layer_type: torch_geometric.nn.GraphConv
+  node_feat_dim: 75
+  hidden_dims: [64, 64]
+  dense_dim: 128
+  dropout_rate: 0.2
+  n_classes: 2
+  batch_norm: true
+  block_order: [conv, batchnorm, relu, dropout]
+  readout: global_mean_pool
+  head: [linear_128, relu, dropout, linear_2]
+  output: raw_logits
+
+# ---------------------------------------------------------------------------
+# Training — recovered verbatim
+# ---------------------------------------------------------------------------
+training:
+  optimizer: Adam
+  lr: 0.001
+  weight_decay: null              # not set historically
+  criterion: CrossEntropyLoss
+  class_weighted: false           # despite 55.5/44.5 imbalance
+  batch_size: 32
+  shuffle_train: true
+  num_epochs: 700
+  num_epochs_sensitivity: [200, 400, 500, 600, 700, 1000]
+  early_stopping: none            # not used historically
+  lr_scheduler: none
+  checkpoint_selection:
+    monitor: f1
+    split: validation
+    mode: max
+    note: >-
+      One checkpoint is selected by maximum validation F1. Every reported metric
+      is computed from that single checkpoint's predictions. Metrics are never
+      independently maximized across epochs (contrast D-004).
+
+# ---------------------------------------------------------------------------
+# Evaluation — CORRECTION
+# ---------------------------------------------------------------------------
+evaluation:
+  splits:
+    reproduction: results/protocol/random_split_manifest.csv
+    generalization: results/protocol/scaffold_split_manifest.csv
+  report_partitions: [validation, test]
+  status: CORRECTION
+  reason: >-
+    Every candidate notebook constructs a test loader but never evaluates it.
+    The historically reported values (for example 0.8676 / 0.8533 / 0.9281) are
+    validation-set metrics at the epoch of maximum validation F1, confirmed by
+    the classification-report support counts 226 and 182, which equal the
+    validation partition. Selecting and reporting on the same partition across
+    hundreds of epochs is optimistically biased. The reconstruction selects on
+    validation and additionally reports held-out test metrics from that same
+    checkpoint. See docs/discrepancies.md D-010.
+  metrics: [accuracy, precision, recall, f1, roc_auc, pr_auc]
+  confusion_matrix: true
+
+# ---------------------------------------------------------------------------
+# Explainability — CORRECTION
+# ---------------------------------------------------------------------------
+explainer:
+  algorithm: GNNExplainer
+  algorithm_epochs: 200
+  explanation_type: model
+  node_mask_type: attributes
+  edge_mask_type: object
+  task_level: graph
+  return_type: raw
+  historical_mode: binary_classification
+  mode: multiclass_classification
+  mode_status: CORRECTION
+  mode_reason: >-
+    The historical explainer declared mode='binary_classification' while the
+    model returns two logits. The saved Explanation object shows target=[2] for
+    a single molecule, indicating the explainer treated the two-column output as
+    two independent binary predictions rather than one two-class prediction.
+    The reconstruction declares multiclass_classification to match the 2-logit
+    head. See docs/discrepancies.md D-012.
+
+reproducibility:
+  seed: 42
+  deterministic_torch: true
+  device: cpu

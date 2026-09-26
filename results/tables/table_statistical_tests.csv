@@ -1,0 +1,7 @@
+Comparison,Metric,N pairs,Mean difference,Cohen's dz,Paired t p,Wilcoxon p
+model4_pyg minus svc_ecfp4,accuracy,5,-0.0044,-0.34,0.4904,0.6250
+model4_pyg minus svc_ecfp4,precision,5,-0.0211,-0.96,0.0981,0.1875
+model4_pyg minus svc_ecfp4,recall,5,+0.0202,+0.95,0.1012,0.1250
+model4_pyg minus svc_ecfp4,f1,5,-0.0007,-0.05,0.9135,1.0000
+model4_pyg minus svc_ecfp4,roc_auc,5,-0.0007,-0.08,0.8694,1.0000
+model4_pyg minus svc_ecfp4,pr_auc,5,-0.0086,-0.38,0.4473,0.4375

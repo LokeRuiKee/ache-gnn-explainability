@@ -1,0 +1,1434 @@
+{
+  "schema_version": 1,
+  "notebook_count": 25,
+  "reported_model4_target": {
+    "accuracy": 0.87,
+    "f1": 0.86,
+    "roc_auc_range": [
+      0.92,
+      0.93
+    ]
+  },
+  "model4_candidates": [
+    {
+      "path": "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8676,
+          "f1": 0.8533,
+          "roc_auc": 0.9281
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        700
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [],
+      "selected_triplet": {
+        "cell_index": 16,
+        "accuracy": 0.8676,
+        "f1": 0.8533,
+        "roc_auc": 0.9281
+      },
+      "distance_to_reported_model4": 0.0122,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.0072
+    },
+    {
+      "path": "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8725,
+          "f1": 0.8556,
+          "roc_auc": 0.9308
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        1000
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [],
+      "selected_triplet": {
+        "cell_index": 16,
+        "accuracy": 0.8725,
+        "f1": 0.8556,
+        "roc_auc": 0.9308
+      },
+      "distance_to_reported_model4": 0.0127,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.0077
+    },
+    {
+      "path": "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8627,
+          "f1": 0.8503,
+          "roc_auc": 0.9239
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [],
+      "selected_triplet": {
+        "cell_index": 16,
+        "accuracy": 0.8627,
+        "f1": 0.8503,
+        "roc_auc": 0.9239
+      },
+      "distance_to_reported_model4": 0.0181,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.0131
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8799,
+          "f1": 0.8635,
+          "roc_auc": 0.9308
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        600
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [],
+      "selected_triplet": {
+        "cell_index": 16,
+        "accuracy": 0.8799,
+        "f1": 0.8635,
+        "roc_auc": 0.9308
+      },
+      "distance_to_reported_model4": 0.0192,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.0142
+    },
+    {
+      "path": "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8775,
+          "f1": 0.8641,
+          "roc_auc": 0.94
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        400
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [],
+      "selected_triplet": {
+        "cell_index": 16,
+        "accuracy": 0.8775,
+        "f1": 0.8641,
+        "roc_auc": 0.94
+      },
+      "distance_to_reported_model4": 0.0266,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.0216
+    },
+    {
+      "path": "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8799,
+          "f1": 0.8679,
+          "roc_auc": 0.9342
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        500
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [],
+      "selected_triplet": {
+        "cell_index": 16,
+        "accuracy": 0.8799,
+        "f1": 0.8679,
+        "roc_auc": 0.9342
+      },
+      "distance_to_reported_model4": 0.027,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.022
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8848,
+          "f1": 0.8683,
+          "roc_auc": 0.9304
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        700
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [],
+      "selected_triplet": {
+        "cell_index": 16,
+        "accuracy": 0.8848,
+        "f1": 0.8683,
+        "roc_auc": 0.9304
+      },
+      "distance_to_reported_model4": 0.0285,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.0235
+    },
+    {
+      "path": "FYP2/Copy of FYP2exp12_gridSearchGCN_wip.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 18,
+          "accuracy": 0.85995085995086,
+          "f1": 0.848,
+          "roc_auc": 0.9341905832885151
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ],
+        []
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 19,
+          "type": "AttributeError",
+          "message": "'str' object has no attribute 'items'"
+        },
+        {
+          "cell_index": 22,
+          "type": "NameError",
+          "message": "name 'model' is not defined"
+        }
+      ],
+      "selected_triplet": {
+        "cell_index": 18,
+        "accuracy": 0.85995085995086,
+        "f1": 0.848,
+        "roc_auc": 0.9341905832885151
+      },
+      "distance_to_reported_model4": 0.03123972,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.02623972
+    },
+    {
+      "path": "FYP2/FYP2exp12_gridSearchGCN_wip.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 18,
+          "accuracy": 0.85995085995086,
+          "f1": 0.848,
+          "roc_auc": 0.9341905832885151
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ],
+        []
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 19,
+          "type": "AttributeError",
+          "message": "'str' object has no attribute 'items'"
+        },
+        {
+          "cell_index": 22,
+          "type": "NameError",
+          "message": "name 'model' is not defined"
+        }
+      ],
+      "selected_triplet": {
+        "cell_index": 18,
+        "accuracy": 0.85995085995086,
+        "f1": 0.848,
+        "roc_auc": 0.9341905832885151
+      },
+      "distance_to_reported_model4": 0.03123972,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.02623972
+    },
+    {
+      "path": "FYP2 demo with best hyper & cross val.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 17,
+          "accuracy": 0.8162,
+          "f1": 0.8021,
+          "roc_auc": 0.897
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.827,
+          "f1": 0.8137,
+          "roc_auc": 0.8974
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.816,
+          "f1": 0.8042,
+          "roc_auc": 0.8851
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8344,
+          "f1": 0.8193,
+          "roc_auc": 0.9006
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8098,
+          "f1": 0.7903,
+          "roc_auc": 0.8893
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8233,
+          "f1": 0.8059,
+          "roc_auc": 0.8966
+        }
+      ],
+      "cv_average_metrics": [
+        {
+          "cell_index": 18,
+          "f1": 0.806676,
+          "roc_auc": 0.89819,
+          "accuracy": 0.822331,
+          "minimum_validation_loss": 0.404623
+        }
+      ],
+      "selection_metrics": [
+        "f1",
+        "auc"
+      ],
+      "declared_epochs": [
+        30,
+        100,
+        50
+      ],
+      "learning_rates": [
+        0.0005
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.25
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 3,
+          "type": "NameError",
+          "message": "name 'tqdm' is not defined"
+        }
+      ],
+      "selected_triplet": {
+        "cell_index": 18,
+        "accuracy": 0.8344,
+        "f1": 0.8193,
+        "roc_auc": 0.9006
+      },
+      "distance_to_reported_model4": 0.1007,
+      "f1_selection_bonus": 0.005,
+      "candidate_score": 0.0957
+    }
+  ],
+  "notebooks": [
+    {
+      "path": "FYP2 demo with best hyper & cross val.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 17,
+          "accuracy": 0.8162,
+          "f1": 0.8021,
+          "roc_auc": 0.897
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.827,
+          "f1": 0.8137,
+          "roc_auc": 0.8974
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.816,
+          "f1": 0.8042,
+          "roc_auc": 0.8851
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8344,
+          "f1": 0.8193,
+          "roc_auc": 0.9006
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8098,
+          "f1": 0.7903,
+          "roc_auc": 0.8893
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8233,
+          "f1": 0.8059,
+          "roc_auc": 0.8966
+        }
+      ],
+      "cv_average_metrics": [
+        {
+          "cell_index": 18,
+          "f1": 0.806676,
+          "roc_auc": 0.89819,
+          "accuracy": 0.822331,
+          "minimum_validation_loss": 0.404623
+        }
+      ],
+      "selection_metrics": [
+        "f1",
+        "auc"
+      ],
+      "declared_epochs": [
+        30,
+        100,
+        50
+      ],
+      "learning_rates": [
+        0.0005
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.25
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 3,
+          "type": "NameError",
+          "message": "name 'tqdm' is not defined"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/Copy of FYP2exp12_gridSearchGCN_wip.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 18,
+          "accuracy": 0.85995085995086,
+          "f1": 0.848,
+          "roc_auc": 0.9341905832885151
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ],
+        []
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 19,
+          "type": "AttributeError",
+          "message": "'str' object has no attribute 'items'"
+        },
+        {
+          "cell_index": 22,
+          "type": "NameError",
+          "message": "name 'model' is not defined"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2 Molecular Validation.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [],
+      "declared_epochs": [],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [],
+      "dropout_rates": [],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 6,
+          "type": "SyntaxError",
+          "message": "invalid syntax (ipython-input-11-2438174211.py, line 2)"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2 demo epoch with best hyper & cross val.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 17,
+          "accuracy": 0.8162,
+          "f1": 0.8021,
+          "roc_auc": 0.897
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1",
+        "auc"
+      ],
+      "declared_epochs": [
+        30,
+        100,
+        50,
+        200
+      ],
+      "learning_rates": [
+        0.0005
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.25
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp10_1000epoch_wip.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        1000
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp11_CNN_wip.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [],
+      "dropout_rates": [],
+      "framework_evidence": [],
+      "errors": [
+        {
+          "cell_index": 12,
+          "type": "KeyboardInterrupt",
+          "message": ""
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp12_gridSearchGCN_wip.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 18,
+          "accuracy": 0.85995085995086,
+          "f1": 0.848,
+          "roc_auc": 0.9341905832885151
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ],
+        []
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 19,
+          "type": "AttributeError",
+          "message": "'str' object has no attribute 'items'"
+        },
+        {
+          "cell_index": 22,
+          "type": "NameError",
+          "message": "name 'model' is not defined"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp13.0 EDA.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30
+      ],
+      "learning_rates": [],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8725,
+          "f1": 0.8556,
+          "roc_auc": 0.9308
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        1000
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8627,
+          "f1": 0.8503,
+          "roc_auc": 0.9239
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8799,
+          "f1": 0.8679,
+          "roc_auc": 0.9342
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        500
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8775,
+          "f1": 0.8641,
+          "roc_auc": 0.94
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        400
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8676,
+          "f1": 0.8533,
+          "roc_auc": 0.9281
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        700
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8848,
+          "f1": 0.8683,
+          "roc_auc": 0.9304
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        700
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 16,
+          "accuracy": 0.8799,
+          "f1": 0.8635,
+          "roc_auc": 0.9308
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        600
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp14_new hyperparameter.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 17,
+          "accuracy": 0.8162,
+          "f1": 0.8139,
+          "roc_auc": 0.8934
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8282,
+          "f1": 0.8177,
+          "roc_auc": 0.9014
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8012,
+          "f1": 0.7939,
+          "roc_auc": 0.8704
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8245,
+          "f1": 0.8145,
+          "roc_auc": 0.8936
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8209,
+          "f1": 0.7967,
+          "roc_auc": 0.8867
+        },
+        {
+          "cell_index": 18,
+          "accuracy": 0.8221,
+          "f1": 0.8043,
+          "roc_auc": 0.8893
+        }
+      ],
+      "cv_average_metrics": [
+        {
+          "cell_index": 18,
+          "f1": 0.805421,
+          "roc_auc": 0.89552,
+          "accuracy": 0.823067,
+          "minimum_validation_loss": 0.409745
+        }
+      ],
+      "selection_metrics": [
+        "f1",
+        "auc"
+      ],
+      "declared_epochs": [
+        30,
+        100,
+        50
+      ],
+      "learning_rates": [
+        0.0005
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.25
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp15_Sutthibutpong + explainable.ipynb",
+      "metric_triplets": [
+        {
+          "cell_index": 10,
+          "accuracy": 0.8162,
+          "f1": 0.8139,
+          "roc_auc": 0.8934
+        }
+      ],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1",
+        "auc"
+      ],
+      "declared_epochs": [
+        30,
+        100,
+        50
+      ],
+      "learning_rates": [
+        0.0001,
+        0.0005
+      ],
+      "hidden_dimensions": [],
+      "dropout_rates": [],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 7,
+          "type": "AttributeError",
+          "message": "'GraphConvModel' object has no attribute '_input_dtypes'"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp1_GNNExplainer.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [],
+      "declared_epochs": [],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [],
+      "dropout_rates": [],
+      "framework_evidence": [
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 19,
+          "type": "NameError",
+          "message": "name 'your_input_dimension' is not defined"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp2, 3_XGNN.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [],
+      "declared_epochs": [],
+      "learning_rates": [
+        0.01
+      ],
+      "hidden_dimensions": [],
+      "dropout_rates": [],
+      "framework_evidence": [
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp4_GNNExplainer.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [],
+      "declared_epochs": [],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp5_GNNExplainer.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [],
+      "declared_epochs": [],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp6_GNNExplainer.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [],
+      "declared_epochs": [],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 45,
+          "type": "NameError",
+          "message": "name 'graphs' is not defined"
+        },
+        {
+          "cell_index": 49,
+          "type": "NameError",
+          "message": "name 'test' is not defined"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp7_GNNExplainer.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [],
+      "declared_epochs": [],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": [
+        {
+          "cell_index": 50,
+          "type": "NameError",
+          "message": "name 'graphs' is not defined"
+        },
+        {
+          "cell_index": 54,
+          "type": "NameError",
+          "message": "name 'test' is not defined"
+        }
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp8_GNNExplainer_fixed explainer.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        50
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    },
+    {
+      "path": "FYP2/FYP2exp9_GNNExplainer_wip.ipynb",
+      "metric_triplets": [],
+      "cv_average_metrics": [],
+      "selection_metrics": [
+        "f1"
+      ],
+      "declared_epochs": [
+        30,
+        200
+      ],
+      "learning_rates": [
+        0.001
+      ],
+      "hidden_dimensions": [
+        [
+          64,
+          64
+        ]
+      ],
+      "dropout_rates": [
+        0.2
+      ],
+      "framework_evidence": [
+        "DeepChem",
+        "PyTorch Geometric"
+      ],
+      "errors": []
+    }
+  ],
+  "limitations": [
+    "No original trained Model 4 checkpoint is present.",
+    "No immutable historical train/validation/test indices are present.",
+    "Notebook outputs are historical evidence and may reflect non-linear execution order.",
+    "DeepChemStyleGraphConv is PyTorch Geometric code, not the original DeepChem GraphConvModel implementation."
+  ]
+}

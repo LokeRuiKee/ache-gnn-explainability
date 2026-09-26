@@ -1,0 +1,40 @@
+# Python bytecode — regenerated on import, tied to one interpreter version
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Note: results/ is deliberately NOT ignored. The committed checkpoints,
+# predictions, metrics, tables, and figures are the evidence behind the paper,
+# and results/artifact_inventory.json records a SHA-256 for each of them.
+
+# Source dataset, outputs that embed its SMILES, local tooling
+cleanData.xlsx
+results/leakage/leakage_groups.csv
+results/model4/*/error_analysis.csv
+.claude/

@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "protocol": "reproduction",
+  "partition": "test",
+  "n": 407,
+  "by_outcome": {
+    "false_negative": {
+      "count": 19,
+      "share_of_partition": 0.04668304668304668,
+      "scaffold_seen_in_training": 0.7894736842105263,
+      "molecular_weight": {
+        "mean": 409.6561052631581,
+        "sd": 109.06861246374274
+      },
+      "heavy_atoms": {
+        "mean": 30.263157894736842,
+        "sd": 8.012782186143157
+      },
+      "logp": {
+        "mean": 4.900290526315793,
+        "sd": 2.0506173461924253
+      },
+      "tpsa": {
+        "mean": 56.84736842105263,
+        "sd": 33.1887405341874
+      },
+      "num_rings": {
+        "mean": 4.0,
+        "sd": 1.5634719199411433
+      },
+      "rotatable_bonds": {
+        "mean": 7.2105263157894735,
+        "sd": 6.654814025019959
+      },
+      "confidence": {
+        "mean": 0.8399742223132536,
+        "sd": 0.15894489112687035
+      }
+    },
+    "false_positive": {
+      "count": 29,
+      "share_of_partition": 0.07125307125307126,
+      "scaffold_seen_in_training": 0.7241379310344828,
+      "molecular_weight": {
+        "mean": 416.7738620689656,
+        "sd": 154.77710129102343
+      },
+      "heavy_atoms": {
+        "mean": 30.482758620689655,
+        "sd": 11.31251105652237
+      },
+      "logp": {
+        "mean": 4.366095172413796,
+        "sd": 2.0454435825837414
+      },
+      "tpsa": {
+        "mean": 66.69275862068966,
+        "sd": 27.67240217469793
+      },
+      "num_rings": {
+        "mean": 3.7241379310344827,
+        "sd": 1.3335385720528332
+      },
+      "rotatable_bonds": {
+        "mean": 7.586206896551724,
+        "sd": 6.472564304041385
+      },
+      "confidence": {
+        "mean": 0.8553990641379311,
+        "sd": 0.12694930533336188
+      }
+    },
+    "true_negative": {
+      "count": 197,
+      "share_of_partition": 0.48402948402948404,
+      "scaffold_seen_in_training": 0.8934010152284264,
+      "molecular_weight": {
+        "mean": 369.3985532994926,
+        "sd": 107.56565897785535
+      },
+      "heavy_atoms": {
+        "mean": 26.604060913705585,
+        "sd": 7.797539103967561
+      },
+      "logp": {
+        "mean": 3.8697823350253833,
+        "sd": 1.748473084466183
+      },
+      "tpsa": {
+        "mean": 54.041522842639594,
+        "sd": 25.108954409665678
+      },
+      "num_rings": {
+        "mean": 3.4619289340101522,
+        "sd": 1.4231405107336397
+      },
+      "rotatable_bonds": {
+        "mean": 5.741116751269035,
+        "sd": 3.901724471121006
+      },
+      "confidence": {
+        "mean": 0.9630045149332098,
+        "sd": 0.09075163494137219
+      }
+    },
+    "true_positive": {
+      "count": 162,
+      "share_of_partition": 0.39803439803439805,
+      "scaffold_seen_in_training": 0.7592592592592593,
+      "molecular_weight": {
+        "mean": 455.04496913580266,
+        "sd": 127.98183470502714
+      },
+      "heavy_atoms": {
+        "mean": 32.97530864197531,
+        "sd": 8.937290582029137
+      },
+      "logp": {
+        "mean": 5.134904444444448,
+        "sd": 1.901973537203819
+      },
+      "tpsa": {
+        "mean": 68.01154320987654,
+        "sd": 31.97704608755629
+      },
+      "num_rings": {
+        "mean": 4.098765432098766,
+        "sd": 1.319749065849285
+      },
+      "rotatable_bonds": {
+        "mean": 8.722222222222221,
+        "sd": 5.255284238017983
+      },
+      "confidence": {
+        "mean": 0.9499092513580247,
+        "sd": 0.08386716982553416
+      }
+    }
+  },
+  "seen_versus_unseen_scaffold": {
+    "seen": {
+      "n": 335,
+      "accuracy": 0.8925373134328358
+    },
+    "unseen": {
+      "n": 72,
+      "accuracy": 0.8333333333333334
+    }
+  },
+  "confidence": {
+    "correct_mean": 0.957095231648586,
+    "error_mean": 0.8492933975823295
+  },
+  "least_confident_errors": [
+    {
+      "row_index": 1557,
+      "smiles": "N#Cc1cc2c(cn1)[nH]c1ncc(-c3ccc(CN4CCC(O)CC4)cc3)cc12",
+      "outcome": "false_negative",
+      "y_prob_positive": 0.45372495,
+      "confidence": 0.54627505
+    },
+    {
+      "row_index": 2788,
+      "smiles": "O=C(Cc1cc(=O)oc2cc(O)ccc12)NNC(=S)Nc1c2c(nc3ccccc13)CCCC2",
+      "outcome": "false_positive",
+      "y_prob_positive": 0.5480264,
+      "confidence": 0.5480264
+    },
+    {
+      "row_index": 1302,
+      "smiles": "COc1cc2c(cc1OC)C(=O)/C(=C/c1ccc(CN(C)Cc3ccccc3)cc1)CC2",
+      "outcome": "false_negative",
+      "y_prob_positive": 0.43624467,
+      "confidence": 0.56375533
+    },
+    {
+      "row_index": 1345,
+      "smiles": "CCN(CCCCCCOCCCCCCCCOCCCCCCN(CC)Cc1ccccc1OC)Cc1ccccc1OC",
+      "outcome": "false_negative",
+      "y_prob_positive": 0.37991282,
+      "confidence": 0.6200871800000001
+    },
+    {
+      "row_index": 1659,
+      "smiles": "COc1cc2cc(C(=O)C3=CC[N+](C)(Cc4ccccc4)CC3)sc2cc1OC",
+      "outcome": "false_negative",
+      "y_prob_positive": 0.37880158,
+      "confidence": 0.62119842
+    }
+  ],
+  "most_confident_errors": [
+    {
+      "row_index": 1869,
+      "smiles": "Cc1cc[n+](C/C=C/C[n+]2ccc(C)cc2)cc1",
+      "outcome": "false_negative",
+      "y_prob_positive": 5.598182e-09,
+      "confidence": 0.999999994401818
+    },
+    {
+      "row_index": 1891,
+      "smiles": "CC(C)(C)c1cc(/C=C/C(=O)NCCC2CCN(Cc3ccc(F)cc3)CC2)cc(C(C)(C)C)c1O",
+      "outcome": "false_negative",
+      "y_prob_positive": 0.00011664395,
+      "confidence": 0.99988335605
+    },
+    {
+      "row_index": 82,
+      "smiles": "CC[N+](CC)(CC)CCOc1cc(OCC[N+](CC)(CC)CC)c(C(=O)NCCCCCC(=O)NNc2c3c(nc4ccccc24)CCCC3)cc1OCC[N+](CC)(CC)CC",
+      "outcome": "false_positive",
+      "y_prob_positive": 0.999819,
+      "confidence": 0.999819
+    },
+    {
+      "row_index": 1502,
+      "smiles": "COc1cccc2c1C=[N+](c1ccc(Cl)cc1)CC2",
+      "outcome": "false_negative",
+      "y_prob_positive": 0.0021287885,
+      "confidence": 0.9978712115
+    },
+    {
+      "row_index": 3088,
+      "smiles": "CCN(Cc1ccccc1OC)C(=O)CCCCCNC1=CC(=O)C(NCCCCCC(=O)N(CC)Cc2ccccc2OC)=CC1=O",
+      "outcome": "false_positive",
+      "y_prob_positive": 0.99168456,
+      "confidence": 0.99168456
+    }
+  ],
+  "interpretation_limits": [
+    "Descriptor differences between outcome groups are descriptive, not causal.",
+    "The workbook has no pIC50 values, so threshold-borderline compounds cannot be identified (D-007).",
+    "Scaffold novelty is measured against this run's training partition only."
+  ]
+}

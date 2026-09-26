@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "source_commit": "3a2512465c87d43f25e974c2959e20e5f38f3df0",
+  "generated_at_utc": "2026-08-17T16:25:15Z",
+  "files": [
+    {
+      "path": "FYP2 demo with best hyper & cross val.ipynb",
+      "bytes": 4080677,
+      "sha256": "d033ff0156e78a4dea011dddaf857865eefae5edb4f1fa51b336348ba62a99ab"
+    },
+    {
+      "path": "FYP2/Copy of FYP2exp12_gridSearchGCN_wip.ipynb",
+      "bytes": 1344191,
+      "sha256": "678ea3787564a8a5dc318c22e42229931eea73b488b5f41f2c2ad9c4328e3f2f"
+    },
+    {
+      "path": "FYP2/FYP2 Molecular Validation.ipynb",
+      "bytes": 67841,
+      "sha256": "4498b911922e34e97bddbf6aac6e570f321230f1a510a7f16b7f692f29b78662"
+    },
+    {
+      "path": "FYP2/FYP2 demo epoch with best hyper & cross val.ipynb",
+      "bytes": 1390655,
+      "sha256": "80988dab7b2e4f5c2c7636449049d01945c8a53ca4d384398386c7924c3d4db5"
+    },
+    {
+      "path": "FYP2/FYP2exp10_1000epoch_wip.ipynb",
+      "bytes": 1226809,
+      "sha256": "a5d62ad0ab51cbc07f799bd806af91c3619aac54731324293b996e33fe2765c9"
+    },
+    {
+      "path": "FYP2/FYP2exp11_CNN_wip.ipynb",
+      "bytes": 20569,
+      "sha256": "f327a5d0312e976049f465da73214bf047f54f655c34e057910a925e2d6eeb9e"
+    },
+    {
+      "path": "FYP2/FYP2exp12_gridSearchGCN_wip.ipynb",
+      "bytes": 1348377,
+      "sha256": "3bc276162e9956c2cf8dcf3aeff88e20b90bc83129b879705269c2061d0e19ce"
+    },
+    {
+      "path": "FYP2/FYP2exp13.0 EDA.ipynb",
+      "bytes": 827525,
+      "sha256": "e4ca1e336c9a0aba87a3726c714d8a9a3258026b1038b47eb2ff8a4d87261609"
+    },
+    {
+      "path": "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+      "bytes": 1409324,
+      "sha256": "249e2bd81b92c936f71dc40be8c593d6218426147c83f5453d10eac6e2e43ce3"
+    },
+    {
+      "path": "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+      "bytes": 1346702,
+      "sha256": "9c0bb8e126adf186568882891e6703230deae0824794cdba941f89acdddc98da"
+    },
+    {
+      "path": "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+      "bytes": 1387355,
+      "sha256": "7a3277447f53caab68b460c98ce744233212a5f0e39c6bb8d5688d64f98a5fe1"
+    },
+    {
+      "path": "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+      "bytes": 1363543,
+      "sha256": "67f90e1fce6b815d6a8c61182623b1b92b28e0a1d0e103989c7a6c64162c21d3"
+    },
+    {
+      "path": "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+      "bytes": 1390363,
+      "sha256": "0747bfd840b9a07a3b2076a2b90c2011bb830cf4c4fc86bbe69699ea0c65b59b"
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+      "bytes": 1391624,
+      "sha256": "d128169b5a0b28ccbe0d41a7f8e763e2266d78fc45cd919bf5c96b113eab8a8f"
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb",
+      "bytes": 1380949,
+      "sha256": "5f95f07175251186ef3b29a9be82465fcfafbcd193c0a3c23fa7a1d4448d940a"
+    },
+    {
+      "path": "FYP2/FYP2exp14_new hyperparameter.ipynb",
+      "bytes": 4044876,
+      "sha256": "6d671ea3652771e08bc7f4064912a99158ba4f7161803de7b1ec62224d3418ae"
+    },
+    {
+      "path": "FYP2/FYP2exp15_Sutthibutpong + explainable.ipynb",
+      "bytes": 933018,
+      "sha256": "8a0199d1e8a47ad9411ab7019ffc5e76435f58243f4e3c242da36e5fd5b38866"
+    },
+    {
+      "path": "FYP2/FYP2exp1_GNNExplainer.ipynb",
+      "bytes": 88247,
+      "sha256": "7f5458ef2a9cbb2d713c3017ae3e17e3a623c59079be18d4a164d01cbea37a63"
+    },
+    {
+      "path": "FYP2/FYP2exp2, 3_XGNN.ipynb",
+      "bytes": 107176,
+      "sha256": "8cbfd7834563e6b4450395ad4adfc5d383f54356e49053d7f828978d34f79e13"
+    },
+    {
+      "path": "FYP2/FYP2exp4_GNNExplainer.ipynb",
+      "bytes": 50087328,
+      "sha256": "bb2b148c2c6abf34e9e8332601f2ba0d999fcf1a7d799abc9f6fa3c871091b7c"
+    },
+    {
+      "path": "FYP2/FYP2exp5_GNNExplainer.ipynb",
+      "bytes": 498912,
+      "sha256": "b7f4b6be0a2f6a4946c6b872692a4bf765a6b738c59c5c67b54355ff02a7e931"
+    },
+    {
+      "path": "FYP2/FYP2exp6_GNNExplainer.ipynb",
+      "bytes": 554608,
+      "sha256": "d0db830d7e525178447eecc9a30e79fafb3992b9677c76e7c2bd1ccec52507e1"
+    },
+    {
+      "path": "FYP2/FYP2exp7_GNNExplainer.ipynb",
+      "bytes": 591522,
+      "sha256": "6e525299d843cef18e9d5d0c232c9ebf53d48191ef711351e19b6a5da4ad5707"
+    },
+    {
+      "path": "FYP2/FYP2exp8_GNNExplainer_fixed explainer.ipynb",
+      "bytes": 1101800,
+      "sha256": "301040da9593ddfa4e95b61877655133dc997e32166edb086141e36e1796e757"
+    },
+    {
+      "path": "FYP2/FYP2exp9_GNNExplainer_wip.ipynb",
+      "bytes": 1161834,
+      "sha256": "8596b8e6e0272a47e19f2bc3f3db7c56de635421841252b0e231fc500f4a95b3"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/Descriptors.xls",
+      "bytes": 957952,
+      "sha256": "944bf0d8c4a2e258a51cba7b430a39e832293df851957af03aedeeb37160cb6f"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/PaDEL-Descriptor.jar",
+      "bytes": 268084,
+      "sha256": "f13940cd98dcdeadc54124f4111081c740fcc6effbfa33cf494125b707cad133"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/descriptors.xml",
+      "bytes": 4669,
+      "sha256": "326541d7f8aeb4bb3a8abfa362c31e38db69d7a9754943d469e059b217eb939a"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/descriptors_output.csv",
+      "bytes": 81038145,
+      "sha256": "7196b7925b3c9823b16793e81e21fce195cb1b6e5ac4d580b46c2a94a6c65c67"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/ambit2-base-2.4.7-SNAPSHOT.jar",
+      "bytes": 179328,
+      "sha256": "eec4ed964d3f5d73f3c9f1a3527205b58ddd59571c021094542cf73a7a4398cb"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/ambit2-core-2.4.7-SNAPSHOT.jar",
+      "bytes": 311684,
+      "sha256": "9659eb0ce50227da1df71a603c2ad9272f4e17ec87b5420c3b942381755d553e"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/ambit2-smarts-2.4.7-SNAPSHOT.jar",
+      "bytes": 167076,
+      "sha256": "c51d3f91a08e99674fa1002f450d38a4d46b4257d2b40f016e040cf503e3c298"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/appframework-1.0.3.jar",
+      "bytes": 272728,
+      "sha256": "f970eb9bb7a3be35275a27bc6d0666c68a44be7f8c0a82897b98eadaa2b81e7d"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/cdk-1.4.15.jar",
+      "bytes": 17337211,
+      "sha256": "1ec1a4998c010fb7e3a2e1148ac45bd22d713555ec4409d2c8a3271e3c9254cd"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/commons-cli-1.2.jar",
+      "bytes": 44461,
+      "sha256": "1aa60985f4fffcda5af880ec84a3a2cc45df8a3e5556c0dca59ef8e6263f85f4"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/guava-17.0.jar",
+      "bytes": 2353615,
+      "sha256": "8dcebc26fff0fdfd17ba996f91aa5293328e992918bf0495a2abb28a7167bae7"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/jama.jar",
+      "bytes": 35148,
+      "sha256": "daff5c10e5f847de5a5422a54d0fbbcb6e73d4c05668cb483fa7da8054da2679"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/jgrapht-0.6.0.jar",
+      "bytes": 101145,
+      "sha256": "b1de687e2a28daad6bddc5a2a57eebfc083297130cd5e2005951711be76c5642"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/l2fprod-common-all.jar",
+      "bytes": 494214,
+      "sha256": "1988508c86020fb70a1ff35a7bdf7f98a92a2924f7f8fe66dadbffde2718f428"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/libPaDEL-Descriptor.jar",
+      "bytes": 305124,
+      "sha256": "8de5c1b26b409ce207d676363a0d332c566c05f245c4859a664d900f9015ee99"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/libPaDEL-Jobs.jar",
+      "bytes": 10216,
+      "sha256": "367c2031eb42f633f78b0730184e4a433973dd2aba64888be6ac8568534a406f"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/libPaDEL.jar",
+      "bytes": 37664,
+      "sha256": "fc2bb3c19a1b0830fdb3eb88fab1ceea2b51e425048e54a844d8b4636f9d44a3"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/swing-worker-1.1.jar",
+      "bytes": 13276,
+      "sha256": "8efd6cd981a23aa2d2e77d66364904af4b37496b8a0420d8f3edf588fb5f7541"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/vecmath1.2-1.14.jar",
+      "bytes": 114291,
+      "sha256": "8bfa3436159073f07c8850a9b708db923c285df916575c17b942da4aba596bef"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/lib/xom-1.1.jar",
+      "bytes": 455149,
+      "sha256": "37ac721a35c4b56068f879286874bbbc2d8cfefc516dc8afff4f8f77015ac413"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/license/LICENSE.txt",
+      "bytes": 33005,
+      "sha256": "b98000031faccf183f0b28c86518a9cd7cae50ef4563cbcb07d9dfa40c10887a"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/license/README - CDK",
+      "bytes": 5213,
+      "sha256": "3d1923cf97232cd410b87024689477f62280b94c366c745a79676b207820f3e7"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/license/lgpl-2.1.txt",
+      "bytes": 27032,
+      "sha256": "1e7e6bae5a5bde32f1ae5a7c37a082d1ab03cf89354f7f936ac40be9e39a6531"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/license/lgpl.license",
+      "bytes": 26925,
+      "sha256": "ceccafe8b0f94dd57ea56bfbbd902be4d91dd5da3563e7898b8c0096d13f76b4"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/mols/input.smi",
+      "bytes": 231691,
+      "sha256": "113528f90813753983a803b0b29e2ac41cee5c07fd584a57d6143d214c157225"
+    },
+    {
+      "path": "FYP2/PaDEL-Descriptor/smiles_input.csv",
+      "bytes": 231704,
+      "sha256": "d886f55c7af6dd118274d37c99343f3788540a0b26fc6ecd4052a45ea11c1310"
+    },
+    {
+      "path": "RESEARCH_CONTEXT.md",
+      "bytes": 25229,
+      "sha256": "5caa7f5f0deeb2ff8a61e870e8756798512577ff95a1e29f858bfd95908e4a42"
+    },
+    {
+      "path": "TODO_MASTER_REVISION.md",
+      "bytes": 28017,
+      "sha256": "448987e88167991c5f45e5523794ffbe1bcab465792852ea40f545f1a5a345ab"
+    },
+    {
+      "path": "cleanData.xlsx",
+      "bytes": 139679,
+      "sha256": "168ab208ca7625994e1f92ef793eb8fd78f8fdd1ee12947478b3c6bf9a97cf28"
+    }
+  ]
+}

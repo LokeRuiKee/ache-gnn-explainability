@@ -1,0 +1,706 @@
+{
+  "schema_version": 1,
+  "candidate_glob": "FYP2/FYP2exp13.*_best hyperparameter*.ipynb",
+  "notebook_count": 7,
+  "reconciliation": {
+    "featurizer": {
+      "agreed": true,
+      "values": [
+        {
+          "value": "deepchem.feat.ConvMolFeaturizer",
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "architecture": {
+      "agreed": true,
+      "values": [
+        {
+          "value": {
+            "class_name": "DeepChemStyleGraphConv",
+            "cell_index": 14,
+            "defaults": {
+              "node_feat_dim": 75,
+              "hidden_dims": [
+                64,
+                64
+              ],
+              "dense_dim": 128,
+              "dropout_rate": 0.2,
+              "n_classes": 2,
+              "batch_norm": true
+            }
+          },
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "instantiation": {
+      "agreed": true,
+      "values": [
+        {
+          "value": {
+            "cell_index": 16,
+            "overrides": {
+              "node_feat_dim": 75,
+              "n_classes": 2
+            }
+          },
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "optimizer": {
+      "agreed": true,
+      "values": [
+        {
+          "value": {
+            "name": "Adam",
+            "lr": 0.001,
+            "weight_decay": null
+          },
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "criterion": {
+      "agreed": true,
+      "values": [
+        {
+          "value": {
+            "name": "CrossEntropyLoss",
+            "class_weighted": false
+          },
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "batch_sizes": {
+      "agreed": true,
+      "values": [
+        {
+          "value": [
+            32
+          ],
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "test_loader_defined": {
+      "agreed": true,
+      "values": [
+        {
+          "value": true,
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "test_set_evaluated": {
+      "agreed": true,
+      "values": [
+        {
+          "value": false,
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    },
+    "explainer": {
+      "agreed": true,
+      "values": [
+        {
+          "value": {
+            "cell_index": 18,
+            "algorithm": "GNNExplainer",
+            "algorithm_epochs": 200,
+            "explanation_type": "model",
+            "node_mask_type": "attributes",
+            "edge_mask_type": "object",
+            "mode": "binary_classification",
+            "task_level": "graph",
+            "return_type": "raw"
+          },
+          "notebooks": [
+            "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+            "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+            "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+            "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+            "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+            "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb"
+          ]
+        }
+      ]
+    }
+  },
+  "training_by_notebook": [
+    {
+      "path": "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 1000,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      }
+    },
+    {
+      "path": "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 200,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      }
+    },
+    {
+      "path": "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 500,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      }
+    },
+    {
+      "path": "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 400,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      }
+    },
+    {
+      "path": "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 700,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      }
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 700,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      }
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb",
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 600,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      }
+    }
+  ],
+  "notebooks": [
+    {
+      "path": "FYP2/FYP2exp13.1_best hyperparameter1000epoch.ipynb",
+      "featurizer": "deepchem.feat.ConvMolFeaturizer",
+      "architecture": {
+        "class_name": "DeepChemStyleGraphConv",
+        "cell_index": 14,
+        "defaults": {
+          "node_feat_dim": 75,
+          "hidden_dims": [
+            64,
+            64
+          ],
+          "dense_dim": 128,
+          "dropout_rate": 0.2,
+          "n_classes": 2,
+          "batch_norm": true
+        }
+      },
+      "instantiation": {
+        "cell_index": 16,
+        "overrides": {
+          "node_feat_dim": 75,
+          "n_classes": 2
+        }
+      },
+      "optimizer": {
+        "name": "Adam",
+        "lr": 0.001,
+        "weight_decay": null
+      },
+      "criterion": {
+        "name": "CrossEntropyLoss",
+        "class_weighted": false
+      },
+      "batch_sizes": [
+        32
+      ],
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 1000,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      },
+      "test_loader_defined": true,
+      "test_set_evaluated": false,
+      "explainer": {
+        "cell_index": 18,
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "binary_classification",
+        "task_level": "graph",
+        "return_type": "raw"
+      },
+      "unparsed_cells": [
+        0
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp13.2_best hyperparameter200epoch.ipynb",
+      "featurizer": "deepchem.feat.ConvMolFeaturizer",
+      "architecture": {
+        "class_name": "DeepChemStyleGraphConv",
+        "cell_index": 14,
+        "defaults": {
+          "node_feat_dim": 75,
+          "hidden_dims": [
+            64,
+            64
+          ],
+          "dense_dim": 128,
+          "dropout_rate": 0.2,
+          "n_classes": 2,
+          "batch_norm": true
+        }
+      },
+      "instantiation": {
+        "cell_index": 16,
+        "overrides": {
+          "node_feat_dim": 75,
+          "n_classes": 2
+        }
+      },
+      "optimizer": {
+        "name": "Adam",
+        "lr": 0.001,
+        "weight_decay": null
+      },
+      "criterion": {
+        "name": "CrossEntropyLoss",
+        "class_weighted": false
+      },
+      "batch_sizes": [
+        32
+      ],
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 200,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      },
+      "test_loader_defined": true,
+      "test_set_evaluated": false,
+      "explainer": {
+        "cell_index": 18,
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "binary_classification",
+        "task_level": "graph",
+        "return_type": "raw"
+      },
+      "unparsed_cells": [
+        0
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp13.3_best hyperparameter500epoch.ipynb",
+      "featurizer": "deepchem.feat.ConvMolFeaturizer",
+      "architecture": {
+        "class_name": "DeepChemStyleGraphConv",
+        "cell_index": 14,
+        "defaults": {
+          "node_feat_dim": 75,
+          "hidden_dims": [
+            64,
+            64
+          ],
+          "dense_dim": 128,
+          "dropout_rate": 0.2,
+          "n_classes": 2,
+          "batch_norm": true
+        }
+      },
+      "instantiation": {
+        "cell_index": 16,
+        "overrides": {
+          "node_feat_dim": 75,
+          "n_classes": 2
+        }
+      },
+      "optimizer": {
+        "name": "Adam",
+        "lr": 0.001,
+        "weight_decay": null
+      },
+      "criterion": {
+        "name": "CrossEntropyLoss",
+        "class_weighted": false
+      },
+      "batch_sizes": [
+        32
+      ],
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 500,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      },
+      "test_loader_defined": true,
+      "test_set_evaluated": false,
+      "explainer": {
+        "cell_index": 18,
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "binary_classification",
+        "task_level": "graph",
+        "return_type": "raw"
+      },
+      "unparsed_cells": [
+        0
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp13.4_best hyperparameter400epoch.ipynb",
+      "featurizer": "deepchem.feat.ConvMolFeaturizer",
+      "architecture": {
+        "class_name": "DeepChemStyleGraphConv",
+        "cell_index": 14,
+        "defaults": {
+          "node_feat_dim": 75,
+          "hidden_dims": [
+            64,
+            64
+          ],
+          "dense_dim": 128,
+          "dropout_rate": 0.2,
+          "n_classes": 2,
+          "batch_norm": true
+        }
+      },
+      "instantiation": {
+        "cell_index": 16,
+        "overrides": {
+          "node_feat_dim": 75,
+          "n_classes": 2
+        }
+      },
+      "optimizer": {
+        "name": "Adam",
+        "lr": 0.001,
+        "weight_decay": null
+      },
+      "criterion": {
+        "name": "CrossEntropyLoss",
+        "class_weighted": false
+      },
+      "batch_sizes": [
+        32
+      ],
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 400,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      },
+      "test_loader_defined": true,
+      "test_set_evaluated": false,
+      "explainer": {
+        "cell_index": 18,
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "binary_classification",
+        "task_level": "graph",
+        "return_type": "raw"
+      },
+      "unparsed_cells": [
+        0
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp13.5_best hyperparameter700epoch.ipynb",
+      "featurizer": "deepchem.feat.ConvMolFeaturizer",
+      "architecture": {
+        "class_name": "DeepChemStyleGraphConv",
+        "cell_index": 14,
+        "defaults": {
+          "node_feat_dim": 75,
+          "hidden_dims": [
+            64,
+            64
+          ],
+          "dense_dim": 128,
+          "dropout_rate": 0.2,
+          "n_classes": 2,
+          "batch_norm": true
+        }
+      },
+      "instantiation": {
+        "cell_index": 16,
+        "overrides": {
+          "node_feat_dim": 75,
+          "n_classes": 2
+        }
+      },
+      "optimizer": {
+        "name": "Adam",
+        "lr": 0.001,
+        "weight_decay": null
+      },
+      "criterion": {
+        "name": "CrossEntropyLoss",
+        "class_weighted": false
+      },
+      "batch_sizes": [
+        32
+      ],
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 700,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      },
+      "test_loader_defined": true,
+      "test_set_evaluated": false,
+      "explainer": {
+        "cell_index": 18,
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "binary_classification",
+        "task_level": "graph",
+        "return_type": "raw"
+      },
+      "unparsed_cells": [
+        0
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.0_best hyperparameter700epoch.ipynb",
+      "featurizer": "deepchem.feat.ConvMolFeaturizer",
+      "architecture": {
+        "class_name": "DeepChemStyleGraphConv",
+        "cell_index": 14,
+        "defaults": {
+          "node_feat_dim": 75,
+          "hidden_dims": [
+            64,
+            64
+          ],
+          "dense_dim": 128,
+          "dropout_rate": 0.2,
+          "n_classes": 2,
+          "batch_norm": true
+        }
+      },
+      "instantiation": {
+        "cell_index": 16,
+        "overrides": {
+          "node_feat_dim": 75,
+          "n_classes": 2
+        }
+      },
+      "optimizer": {
+        "name": "Adam",
+        "lr": 0.001,
+        "weight_decay": null
+      },
+      "criterion": {
+        "name": "CrossEntropyLoss",
+        "class_weighted": false
+      },
+      "batch_sizes": [
+        32
+      ],
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 700,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      },
+      "test_loader_defined": true,
+      "test_set_evaluated": false,
+      "explainer": {
+        "cell_index": 18,
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "binary_classification",
+        "task_level": "graph",
+        "return_type": "raw"
+      },
+      "unparsed_cells": [
+        0
+      ]
+    },
+    {
+      "path": "FYP2/FYP2exp13.6.1_best hyperparameter600epoch.ipynb",
+      "featurizer": "deepchem.feat.ConvMolFeaturizer",
+      "architecture": {
+        "class_name": "DeepChemStyleGraphConv",
+        "cell_index": 14,
+        "defaults": {
+          "node_feat_dim": 75,
+          "hidden_dims": [
+            64,
+            64
+          ],
+          "dense_dim": 128,
+          "dropout_rate": 0.2,
+          "n_classes": 2,
+          "batch_norm": true
+        }
+      },
+      "instantiation": {
+        "cell_index": 16,
+        "overrides": {
+          "node_feat_dim": 75,
+          "n_classes": 2
+        }
+      },
+      "optimizer": {
+        "name": "Adam",
+        "lr": 0.001,
+        "weight_decay": null
+      },
+      "criterion": {
+        "name": "CrossEntropyLoss",
+        "class_weighted": false
+      },
+      "batch_sizes": [
+        32
+      ],
+      "training": {
+        "cell_index": 16,
+        "num_epochs": 600,
+        "monitor_metric": "f1",
+        "save_path": "best_model.pt",
+        "is_binary": true
+      },
+      "test_loader_defined": true,
+      "test_set_evaluated": false,
+      "explainer": {
+        "cell_index": 18,
+        "algorithm": "GNNExplainer",
+        "algorithm_epochs": 200,
+        "explanation_type": "model",
+        "node_mask_type": "attributes",
+        "edge_mask_type": "object",
+        "mode": "binary_classification",
+        "task_level": "graph",
+        "return_type": "raw"
+      },
+      "unparsed_cells": [
+        0
+      ]
+    }
+  ],
+  "limitations": [
+    "No original trained Model 4 checkpoint exists; these records describe source code, not a run.",
+    "Notebook outputs may reflect non-linear execution order.",
+    "DeepChemStyleGraphConv is PyTorch Geometric code, not DeepChem GraphConvModel.",
+    "Every candidate notebook builds a test loader but never evaluates it; the reported metrics are validation-set values at the epoch selected by maximum validation F1."
+  ]
+}

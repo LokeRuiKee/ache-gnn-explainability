@@ -1,0 +1,8 @@
+**Predictive performance of the selected checkpoint under each evaluation protocol.**
+
+| Protocol                                    | Partition   |   N |   Accuracy |   Precision |   Recall |     F1 |   ROC-AUC |   PR-AUC | F1 95% CI        |
+|:--------------------------------------------|:------------|----:|-----------:|------------:|---------:|-------:|----------:|---------:|:-----------------|
+| Historical random split (reproduction)      | Validation  | 408 |     0.8799 |      0.8556 |   0.8791 | 0.8672 |    0.9323 |   0.9157 | [0.8286, 0.9023] |
+| Historical random split (reproduction)      | Test        | 407 |     0.8821 |      0.8482 |   0.895  | 0.871  |    0.9448 |   0.9248 | [0.8338, 0.9060] |
+| Prospective scaffold split (generalization) | Validation  | 408 |     0.8578 |      0.8603 |   0.8834 | 0.8717 |    0.9143 |   0.9133 | [0.8371, 0.9018] |
+| Prospective scaffold split (generalization) | Test        | 407 |     0.7936 |      0.789  |   0.8462 | 0.8166 |    0.8727 |   0.8902 | [0.7760, 0.8529] |

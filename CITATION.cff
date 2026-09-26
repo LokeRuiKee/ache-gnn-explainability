@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite both the paper and this repository."
+title: "Graph neural network prediction and explanation for acetylcholinesterase inhibitors"
+abstract: >-
+  Code, data splits, trained checkpoints, per-molecule predictions, metrics, and
+  figures for a reproducible evaluation of a graph convolutional classifier for
+  acetylcholinesterase inhibitors, reporting random-split and scaffold-disjoint
+  performance separately, a paired comparison against an ECFP4 support vector
+  classifier on identical folds, and a quantitative assessment of GNNExplainer
+  attribution fidelity, stability, and sparsity.
+type: software
+authors:
+  # AUTHOR: check the name split below — "family-names" is the surname.
+  # Add an orcid line if you have one, and add any co-authors.
+  - family-names: "Loke"
+    given-names: "Rui Kee"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/LokeRuiKee/ache-gnn-explainability"
+license: MIT
+version: "1.0.0"
+date-released: "2026-09-21"
+keywords:
+  - explainable artificial intelligence
+  - graph neural networks
+  - acetylcholinesterase
+  - drug discovery
+  - molecular property prediction
+  - model interpretability
+  - reproducibility
+
+# AUTHOR: fill this in once the paper has a DOI, then uncomment.
+# preferred-citation:
+#   type: article
+#   title: "PAPER TITLE"
+#   authors:
+#     - family-names: "Loke"
+#       given-names: "Rui Kee"
+#   journal: "JOURNAL"
+#   year: 2026
+#   doi: "10.xxxx/xxxxx"
